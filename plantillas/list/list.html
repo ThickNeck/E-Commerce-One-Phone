@@ -1,0 +1,382 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONE PHONE - Accesorios y Gadgets</title>
+  <link rel="stylesheet" href="../../bootstrap-files/bootstrap.css">
+  <link rel="stylesheet" href="list.css">
+</head>
+
+<body>
+
+<!--BARRA DE NAVEGACIÓN-->
+<nav class="navbar navbar-expand-md navbar-dark py-3 bg-dark sticky-top">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">ONE PHONE</a>
+      <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSearch">
+          <form class="d-flex flex-grow-1">
+              <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Buscar">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+          <ul class="navbar-nav ms-2">
+            <li class="nav-item">
+                <a class="nav-link active text-nowrap" aria-current="page" href="#">Mi cuenta</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Carrito</a>
+            </li>
+        </ul>
+      </div>
+  </div>
+</nav>
+
+<!-- PRODUCTOS -->
+<div class="d-flex flex-column flex-sm-row">
+  <!-- Filtros y categorías -->
+  <div class="bg-success d-flex flex-column">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Categorías de productos
+      </button>
+      
+      <ul class="dropdown-menu p-3" aria-labelledby="dropdownMenuButton" style="width: 200px;">
+        <form>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="electronicos" id="checkElectronicos">
+            <label class="form-check-label" for="checkElectronicos">
+              Electrónicos
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="ropa" id="checkRopa">
+            <label class="form-check-label" for="checkRopa">
+              Ropa
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="hogar" id="checkHogar">
+            <label class="form-check-label" for="checkHogar">
+              Hogar y Cocina
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="deporte" id="checkDeporte">
+            <label class="form-check-label" for="checkDeporte">
+              Deportes
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="libros" id="checkLibros">
+            <label class="form-check-label" for="checkLibros">
+              Libros
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="belleza" id="checkBelleza">
+            <label class="form-check-label" for="checkBelleza">
+              Belleza
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="juguetes" id="checkJuguetes">
+            <label class="form-check-label" for="checkJuguetes">
+              Juguetes
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="musica" id="checkMusica">
+            <label class="form-check-label" for="checkMusica">
+              Música
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="automovil" id="checkAutomovil">
+            <label class="form-check-label" for="checkAutomovil">
+              Automóvil
+            </label>
+          </div>
+        </form>
+      </ul>
+    </div>
+    
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        Categorías de productos
+      </button>
+      
+      <ul class="dropdown-menu p-3" aria-labelledby="dropdownMenuButton" style="width: 200px;">
+        <form>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="electronicos" id="checkElectronicos">
+            <label class="form-check-label" for="checkElectronicos">
+              Electrónicos
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="ropa" id="checkRopa">
+            <label class="form-check-label" for="checkRopa">
+              Ropa
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="hogar" id="checkHogar">
+            <label class="form-check-label" for="checkHogar">
+              Hogar y Cocina
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="deporte" id="checkDeporte">
+            <label class="form-check-label" for="checkDeporte">
+              Deportes
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="libros" id="checkLibros">
+            <label class="form-check-label" for="checkLibros">
+              Libros
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="belleza" id="checkBelleza">
+            <label class="form-check-label" for="checkBelleza">
+              Belleza
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="juguetes" id="checkJuguetes">
+            <label class="form-check-label" for="checkJuguetes">
+              Juguetes
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="musica" id="checkMusica">
+            <label class="form-check-label" for="checkMusica">
+              Música
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="automovil" id="checkAutomovil">
+            <label class="form-check-label" for="checkAutomovil">
+              Automóvil
+            </label>
+          </div>
+        </form>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Lista de Productos -->
+  <div class="container">
+    <h1 class="py-3">- Categoría X -</h1>
+    <div class="row">
+        <div class="col">
+          <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">Descripción breve del producto 1.</p>
+                        <p class="card-text"><strong>$100.00</strong></p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 2</h5>
+                        <p class="card-text">Descripción breve del producto 2.</p>
+                        <p class="card-text"><strong>$200.00</strong></p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 3</h5>
+                        <p class="card-text">Descripción breve del producto 3.</p>
+                        <p class="card-text"><strong>$300.00</strong></p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 4 -->
+            <div class="col-md-3">
+              <div class="card mb-4">
+                  <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 4">
+                  <div class="card-body">
+                      <h5 class="card-title">Producto 4</h5>
+                      <p class="card-text">Descripción breve del producto 4.</p>
+                      <p class="card-text"><strong>$400.00</strong></p>
+                      <a href="#" class="btn btn-primary">Ver más</a>
+                  </div>
+              </div>
+            </div>
+            <!-- Agrega más productos según sea necesario -->
+            <div class="col-md-3">
+              <div class="card mb-4">
+                  <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto X">
+                  <div class="card-body">
+                      <h5 class="card-title">Producto X</h5>
+                      <p class="card-text">Descripción breve del producto X.</p>
+                      <p class="card-text"><strong>$621.34</strong></p>
+                      <a href="#" class="btn btn-primary">Ver más</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- PIE DE PÁGINA -->
+<footer class="bg-dark text-light pt-3 pb-3">
+  <div class="container">
+      <div class="row">
+          <!-- Sección de contacto -->
+          <div class="col-md-4">
+              <h5>Contacto:</h5>
+              <ul class="list-unstyled">
+                  <li>Email: <i class="bi bi-envelope">rumbomanuel@hotmail.com</i></li>
+                  <li>Teléfono: <i class="bi bi-telephone">2494584409</i></li>
+                  <li>Dirección: <i class="bi bi-whatsapp">9 de Julio 171, Tandil, Buenos Aires</i></li>
+              </ul>
+          </div>
+          <!-- Sección de soporte -->
+          <div class="col-md-4">
+              <h5>Soporte:</h5>
+              <ul class="list-unstyled">
+                <li><a class="text-light" href="../../plantillas/about/about.html">Sobre nosotros</a></li>
+                <li><button id="btnContacto" class="btn btn-light mt-2">Contactanos vía mensaje directo</button></li>
+              </ul>
+          </div>
+          <!-- Sección de redes -->
+          <div class="col-md-4">
+            <h5>Redes:</h5>
+            <ul class="list-unstyled">
+              <li><a class="text-light" href="https://facebook.com/ww.facebook.com/OnePhonee/m/OnePhonee/">Facebook</a></li>
+              <li><a class="text-light" href="https://instagram.com/www.instagram.com/onephonee/">Instagram</a></li>
+              <li><a class="text-light" href="https://tiktok.com/@elpibitoonephone">Tik Tok</a></li>
+            </ul>
+        </div>
+      </div>
+  </div>
+  <!-- Barra inferior del footer -->
+  <div class="bg-secondary text-center py-3">
+      <p class="mb-0">© 2024 Mi E-Commerce. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="../../bootstrap-files/bootstrap.bundle.js"></script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONE PHONE - Accesorios y Gadgets</title>
+  <link rel="stylesheet" href="../../bootstrap-files/bootstrap.css">
+  <link rel="stylesheet" href="list.css">
+</head>
+<body>
+
+<!--BARRA DE NAVEGACIÓN-->
+<nav class="navbar navbar-expand-md navbar-dark py-3 bg-dark sticky-top">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">ONE PHONE</a>
+      <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSearch">
+          <form class="d-flex flex-grow-1">
+              <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Buscar">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+          <ul class="navbar-nav ms-2">
+            <li class="nav-item">
+                <a class="nav-link active text-nowrap" aria-current="page" href="#">Mi cuenta</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Carrito</a>
+            </li>
+        </ul>
+      </div>
+  </div>
+</nav>
+
+<!-- PRODUCTOS -->
+<div id="fff"></div>
+
+<!-- PIE DE PÁGINA -->
+<footer class="bg-dark text-light pt-3 pb-3">
+  <div class="container">
+      <div class="row">
+          <!-- Sección de contacto -->
+          <div class="col-md-4">
+              <h5>Contacto:</h5>
+              <ul class="list-unstyled">
+                  <li>Email: <i class="bi bi-envelope">rumbomanuel@hotmail.com</i></li>
+                  <li>Teléfono: <i class="bi bi-telephone">2494584409</i></li>
+                  <li>Dirección: <i class="bi bi-whatsapp">9 de Julio 171, Tandil, Buenos Aires</i></li>
+              </ul>
+          </div>
+          <!-- Sección de soporte -->
+          <div class="col-md-4">
+              <h5>Soporte:</h5>
+              <ul class="list-unstyled">
+                <li><a class="text-light" href="../../plantillas/about/about.html">Sobre nosotros</a></li>
+                <li><button id="btnContacto" class="btn btn-light mt-2">Contactanos vía mensaje directo</button></li>
+              </ul>
+          </div>
+          <!-- Sección de redes -->
+          <div class="col-md-4">
+            <h5>Redes:</h5>
+            <ul class="list-unstyled">
+              <li><a class="text-light" href="https://facebook.com/ww.facebook.com/OnePhonee/m/OnePhonee/">Facebook</a></li>
+              <li><a class="text-light" href="https://instagram.com/www.instagram.com/onephonee/">Instagram</a></li>
+              <li><a class="text-light" href="https://tiktok.com/@elpibitoonephone">Tik Tok</a></li>
+            </ul>
+        </div>
+      </div>
+  </div>
+  <!-- Barra inferior del footer -->
+  <div class="bg-secondary text-center py-3">
+      <p class="mb-0">© 2024 Mi E-Commerce. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="../../bootstrap-files/bootstrap.bundle.js"></script>
+</body>
+>>>>>>> 9ac2b5ef7d43108375a846ad74d24f05a311204e
+</html>
