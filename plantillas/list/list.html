@@ -6,14 +6,17 @@
   <title>ONE PHONE - Accesorios y Gadgets</title>
   <link rel="stylesheet" href="../../bootstrap-files/bootstrap.css">
   <link rel="stylesheet" href="list.css">
+  <link rel="stylesheet" href="../gralStyle.css">
 </head>
 
 <body>
 
 <!--BARRA DE NAVEGACIÓN-->
-<nav class="navbar navbar-expand-md navbar-dark py-3 bg-dark sticky-top">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">ONE PHONE</a>
+    <a class="navbar-brand d-flex align-items-center" href="../../plantillas/index/index.html">
+        <img id="logo" class="img-fluid" src="../../imagenes/logo.png" alt="" srcset="">
+    </a>
       <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,165 +37,153 @@
   </div>
 </nav>
 
+<!-- FONDO -->
+<div id="background"></div>
+
 <!-- PRODUCTOS -->
-<div class="d-flex flex-column flex-sm-row">
+<div class="d-flex flex-column flex-md-row py-3 text-light">
   <!-- Filtros y categorías -->
-  <div class="bg-success d-flex flex-column">
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-        Categorías de productos
-      </button>
-      
-      <ul class="dropdown-menu p-3" aria-labelledby="dropdownMenuButton" style="width: 200px;">
-        <form>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="electronicos" id="checkElectronicos">
-            <label class="form-check-label" for="checkElectronicos">
-              Electrónicos
-            </label>
+  <div class="container col-md-2 d-flex flex-column align-items-center">
+    <div class="d-flex flex-md-column w-100">
+      <div class="accordion accordion-flush d-flex flex-md-column border border-4" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Categorías:
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <form>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="electronicos" id="checkElectronicos">
+                  <label class="form-check-label" for="checkElectronicos">
+                    Electrónicos
+                  </label>
+                </div>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="ropa" id="checkRopa">
+                  <label class="form-check-label" for="checkRopa">
+                    Ropa
+                  </label>
+                </div>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="hogar" id="checkHogar">
+                  <label class="form-check-label" for="checkHogar">
+                    Hogar y Cocina
+                  </label>
+                </div>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="deporte" id="checkDeporte">
+                  <label class="form-check-label" for="checkDeporte">
+                    Deportes
+                  </label>
+                </div>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="libros" id="checkLibros">
+                  <label class="form-check-label" for="checkLibros">
+                    Libros
+                  </label>
+                </div>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="belleza" id="checkBelleza">
+                  <label class="form-check-label" for="checkBelleza">
+                    Belleza
+                  </label>
+                </div>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="juguetes" id="checkJuguetes">
+                  <label class="form-check-label" for="checkJuguetes">
+                    Juguetes
+                  </label>
+                </div>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="musica" id="checkMusica">
+                  <label class="form-check-label" for="checkMusica">
+                    Música
+                  </label>
+                </div>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="automovil" id="checkAutomovil">
+                  <label class="form-check-label" for="checkAutomovil">
+                    Automóvil
+                  </label>
+                </div>
+              
+              </form>
+            </div>
           </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="ropa" id="checkRopa">
-            <label class="form-check-label" for="checkRopa">
-              Ropa
-            </label>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Ordenar por:
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <form>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="envio" id="envioEstandar" value="estandar" checked>
+                  <label class="form-check-label" for="envioEstandar">
+                    Todos
+                  </label>
+                </div>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="envio" id="envioRapido" value="rapido">
+                  <label class="form-check-label" for="envioRapido">
+                    Menor precio
+                  </label>
+                </div>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="envio" id="envioDiaSiguiente" value="diaSiguiente">
+                  <label class="form-check-label" for="envioDiaSiguiente">
+                    Mayor precio
+                  </label>
+                </div>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="envio" id="envioRecoger" value="recoger">
+                  <label class="form-check-label" for="envioRecoger">
+                    A-Z
+                  </label>
+                </div>
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="envio" id="envioInternacional" value="internacional">
+                  <label class="form-check-label" for="envioInternacional">
+                    Z-A
+                  </label>
+                </div>
+              
+              </form>
+            </div>
           </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="hogar" id="checkHogar">
-            <label class="form-check-label" for="checkHogar">
-              Hogar y Cocina
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="deporte" id="checkDeporte">
-            <label class="form-check-label" for="checkDeporte">
-              Deportes
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="libros" id="checkLibros">
-            <label class="form-check-label" for="checkLibros">
-              Libros
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="belleza" id="checkBelleza">
-            <label class="form-check-label" for="checkBelleza">
-              Belleza
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="juguetes" id="checkJuguetes">
-            <label class="form-check-label" for="checkJuguetes">
-              Juguetes
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="musica" id="checkMusica">
-            <label class="form-check-label" for="checkMusica">
-              Música
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="automovil" id="checkAutomovil">
-            <label class="form-check-label" for="checkAutomovil">
-              Automóvil
-            </label>
-          </div>
-        </form>
-      </ul>
-    </div>
-    
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-        Categorías de productos
-      </button>
-      
-      <ul class="dropdown-menu p-3" aria-labelledby="dropdownMenuButton" style="width: 200px;">
-        <form>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="electronicos" id="checkElectronicos">
-            <label class="form-check-label" for="checkElectronicos">
-              Electrónicos
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="ropa" id="checkRopa">
-            <label class="form-check-label" for="checkRopa">
-              Ropa
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="hogar" id="checkHogar">
-            <label class="form-check-label" for="checkHogar">
-              Hogar y Cocina
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="deporte" id="checkDeporte">
-            <label class="form-check-label" for="checkDeporte">
-              Deportes
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="libros" id="checkLibros">
-            <label class="form-check-label" for="checkLibros">
-              Libros
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="belleza" id="checkBelleza">
-            <label class="form-check-label" for="checkBelleza">
-              Belleza
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="juguetes" id="checkJuguetes">
-            <label class="form-check-label" for="checkJuguetes">
-              Juguetes
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="musica" id="checkMusica">
-            <label class="form-check-label" for="checkMusica">
-              Música
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="automovil" id="checkAutomovil">
-            <label class="form-check-label" for="checkAutomovil">
-              Automóvil
-            </label>
-          </div>
-        </form>
-      </ul>
+        </div>
+      </div>
     </div>
   </div>
   
   <!-- Lista de Productos -->
   <div class="container">
-    <h1 class="py-3">- Categoría X -</h1>
+    <h1 class="pb-3">Nuestros productos:</h1>
     <div class="row">
         <div class="col">
           <div class="row">
             <!-- Producto 1 -->
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="card mb-4">
                     <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 1">
                     <div class="card-body">
@@ -204,7 +195,7 @@
                 </div>
             </div>
             <!-- Producto 2 -->
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="card mb-4">
                     <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 2">
                     <div class="card-body">
@@ -216,7 +207,7 @@
                 </div>
             </div>
             <!-- Producto 3 -->
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
                 <div class="card mb-4">
                     <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 3">
                     <div class="card-body">
@@ -228,7 +219,7 @@
                 </div>
             </div>
             <!-- Producto 4 -->
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
               <div class="card mb-4">
                   <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 4">
                   <div class="card-body">
@@ -240,7 +231,7 @@
               </div>
             </div>
             <!-- Agrega más productos según sea necesario -->
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
               <div class="card mb-4">
                   <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto X">
                   <div class="card-body">
@@ -275,8 +266,9 @@
           <div class="col-md-4">
               <h5>Soporte:</h5>
               <ul class="list-unstyled">
-                <li><a class="text-light" href="../../plantillas/about/about.html">Sobre nosotros</a></li>
-                <li><button id="btnContacto" class="btn btn-light mt-2">Contactanos vía mensaje directo</button></li>
+                <li><a class="text-light" href="../about/about.html">Sobre nosotros</a></li>
+                <li><button id="btnContacto" class="btn btn-light my-2">Contactanos vía mensaje directo</button></li>
+                <li><a class="text-light" href="#"> Botón de arrepentimiento</a></li>
               </ul>
           </div>
           <!-- Sección de redes -->
@@ -298,5 +290,4 @@
 
 <script src="../../bootstrap-files/bootstrap.bundle.js"></script>
 </body>
-
 </html>
