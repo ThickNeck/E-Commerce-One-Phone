@@ -1,3 +1,19 @@
-#background {
-  background-image: url('../../imagenes/background1.jpg');
+.carousel-item {
+  position: relative;
+  width: 100%;
+  padding-top: 27%;
+}
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px) brightness(0.5);
+  transform: scale(1.1);
+}
+
+.card {
+  background-color: #0d1326;
 }

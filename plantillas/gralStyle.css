@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
+body {
+  background: linear-gradient(135deg, #000000, #0d1a3b, #183d66, #2578a9);
+}
+
 #logo {
   height: 7vh;
+}
+
+.search-icon {
+  width: 25px;
+  height: 25px;
 }
 
 #background {
@@ -16,4 +25,8 @@
   top:0;
   left:50;
   z-index: -1;
+}
+
+#barraNav, footer {
+  background-color: #0d1326
 }

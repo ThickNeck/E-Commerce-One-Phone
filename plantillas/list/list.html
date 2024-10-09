@@ -12,27 +12,35 @@
 <body>
 
 <!--BARRA DE NAVEGACIÓN-->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+<nav id="barraNav" class="navbar navbar-expand-sm navbar-dark sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" href="../../plantillas/index/index.html">
-        <img id="logo" class="img-fluid" src="../../imagenes/logo.png" alt="" srcset="">
-    </a>
+      <a class="navbar-brand d-flex align-items-center" href="../../plantillas/index/index.html">
+          <img id="logo" class="img-fluid" src="../../imagenes/logo.png" alt="" srcset="">
+      </a>
       <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSearch">
+      <div class="collapse navbar-collapse gap-2" id="navbarSearch">
           <form class="d-flex flex-grow-1">
-              <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Buscar">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
+              <input class="form-control rounded-0" type="search" placeholder="Buscar productos..." aria-label="Buscar">
+              <a class="btn btn-primary rounded-0 d-flex justify-content-center align-items-center" type="submit">
+                  <img class="search-icon" src="../../imagenes/search.svg" alt="">
+              </a>
           </form>
-          <ul class="navbar-nav ms-2">
-            <li class="nav-item">
-                <a class="nav-link active text-nowrap" aria-current="page" href="#">Mi cuenta</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Carrito</a>
-            </li>
-        </ul>
+          <ul class="navbar-nav ms-2 gap-2">
+              <li class="nav-item">
+                  <a class="nav-link active d-flex align-items-center" aria-current="page" href="#">
+                      <img class="search-icon" src="../../imagenes/account.svg" alt="">
+                      <span class="ps-2 d-sm-none">Mi cuenta</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active d-flex align-items-center" href="#">
+                      <img class="search-icon" src="../../imagenes/cart.svg" alt="">
+                      <span class="ps-2 d-sm-none">Carrito</span>
+                  </a>
+              </li>
+          </ul>
       </div>
   </div>
 </nav>
@@ -40,10 +48,19 @@
 <!-- FONDO -->
 <div id="background"></div>
 
+<!-- BREADCRUMBS -->
+<nav class="ps-4 pt-3" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item text-light"><a href="#">Inicio</a></li>
+    <li class="breadcrumb-item text-light active" aria-current="page">Productos</li>
+  </ol>
+</nav>
+
 <!-- PRODUCTOS -->
-<div class="d-flex flex-column flex-md-row py-3 text-light">
+<div class="d-flex flex-column flex-lg-row text-light">
+  
   <!-- Filtros y categorías -->
-  <div class="container col-md-2 d-flex flex-column align-items-center">
+  <div class="container pb-3 col-lg-2 d-flex flex-column align-items-center">
     <div class="d-flex flex-md-column w-100">
       <div class="accordion accordion-flush d-flex flex-md-column border border-4" id="accordionFlushExample">
         <div class="accordion-item">
@@ -59,63 +76,63 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="electronicos" id="checkElectronicos">
                   <label class="form-check-label" for="checkElectronicos">
-                    Electrónicos
+                    Parlantes
                   </label>
                 </div>
               
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="ropa" id="checkRopa">
                   <label class="form-check-label" for="checkRopa">
-                    Ropa
+                    Auriculares
                   </label>
                 </div>
               
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="hogar" id="checkHogar">
                   <label class="form-check-label" for="checkHogar">
-                    Hogar y Cocina
+                    Cargadores y tablets
                   </label>
                 </div>
               
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="deporte" id="checkDeporte">
                   <label class="form-check-label" for="checkDeporte">
-                    Deportes
+                    Computación
                   </label>
                 </div>
               
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="libros" id="checkLibros">
                   <label class="form-check-label" for="checkLibros">
-                    Libros
+                    Artículos del hogar
                   </label>
                 </div>
               
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="belleza" id="checkBelleza">
                   <label class="form-check-label" for="checkBelleza">
-                    Belleza
+                    Joysticks
                   </label>
                 </div>
               
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="juguetes" id="checkJuguetes">
                   <label class="form-check-label" for="checkJuguetes">
-                    Juguetes
+                    Relojes
                   </label>
                 </div>
               
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="musica" id="checkMusica">
                   <label class="form-check-label" for="checkMusica">
-                    Música
+                    Iluminación
                   </label>
                 </div>
               
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="automovil" id="checkAutomovil">
                   <label class="form-check-label" for="checkAutomovil">
-                    Automóvil
+                    Soportes
                   </label>
                 </div>
               
@@ -178,12 +195,11 @@
   
   <!-- Lista de Productos -->
   <div class="container">
-    <h1 class="pb-3">Nuestros productos:</h1>
     <div class="row">
         <div class="col">
           <div class="row">
             <!-- Producto 1 -->
-            <div class="col-6 col-md-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card mb-4">
                     <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 1">
                     <div class="card-body">
@@ -195,7 +211,7 @@
                 </div>
             </div>
             <!-- Producto 2 -->
-            <div class="col-6 col-md-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card mb-4">
                     <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 2">
                     <div class="card-body">
@@ -207,7 +223,7 @@
                 </div>
             </div>
             <!-- Producto 3 -->
-            <div class="col-6 col-md-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card mb-4">
                     <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 3">
                     <div class="card-body">
@@ -219,7 +235,7 @@
                 </div>
             </div>
             <!-- Producto 4 -->
-            <div class="col-6 col-md-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="card mb-4">
                   <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 4">
                   <div class="card-body">
@@ -231,7 +247,7 @@
               </div>
             </div>
             <!-- Agrega más productos según sea necesario -->
-            <div class="col-6 col-md-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="card mb-4">
                   <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto X">
                   <div class="card-body">
@@ -250,7 +266,7 @@
 
 
 <!-- PIE DE PÁGINA -->
-<footer class="bg-dark text-light pt-3 pb-3">
+<footer class="text-light py-3">
   <div class="container">
       <div class="row">
           <!-- Sección de contacto -->
@@ -266,25 +282,40 @@
           <div class="col-md-4">
               <h5>Soporte:</h5>
               <ul class="list-unstyled">
-                <li><a class="text-light" href="../about/about.html">Sobre nosotros</a></li>
+                <li><a class="text-light link-offset-3" href="../about/about.html">Sobre nosotros</a></li>
                 <li><button id="btnContacto" class="btn btn-light my-2">Contactanos vía mensaje directo</button></li>
-                <li><a class="text-light" href="#"> Botón de arrepentimiento</a></li>
+                <li><a class="text-light link-offset-3" href="#"> Botón de arrepentimiento</a></li>
               </ul>
           </div>
           <!-- Sección de redes -->
           <div class="col-md-4">
             <h5>Redes:</h5>
             <ul class="list-unstyled">
-              <li><a class="text-light" href="https://facebook.com/ww.facebook.com/OnePhonee/m/OnePhonee/">Facebook</a></li>
-              <li><a class="text-light" href="https://instagram.com/www.instagram.com/onephonee/">Instagram</a></li>
-              <li><a class="text-light" href="https://tiktok.com/@elpibitoonephone">Tik Tok</a></li>
+              <li class="pb-2">
+                  <a class="text-light link-offset-2" target="_blank" href="https://facebook.com/ww.facebook.com/OnePhonee/m/OnePhonee/">
+                      <img class="search-icon" src="../../imagenes/facebook.svg" alt="">
+                      <span class="ps-2">Facebook</span>
+                  </a>
+              </li>
+              <li class="pb-2">
+                  <a class="text-light link-offset-2" target="_blank" href="https://instagram.com/www.instagram.com/onephonee/">
+                      <img class="search-icon" src="../../imagenes/instagram.svg" alt="">
+                      <span class="ps-2">Instagram</span>
+                  </a>
+              </li>
+              <li class="pb-2">
+                  <a class="text-light link-offset-2" target="_blank" href="https://tiktok.com/@elpibitoonephone">
+                      <img class="search-icon" src="../../imagenes/tiktok.svg" alt="">
+                      <span class="ps-2">Tik Tok</span>
+                  </a>
+              </li>
             </ul>
         </div>
       </div>
   </div>
   <!-- Barra inferior del footer -->
   <div class="bg-secondary text-center py-3">
-      <p class="mb-0">© 2024 Mi E-Commerce. Todos los derechos reservados.</p>
+      <p class="my-0">© 2024 Mi E-Commerce. Todos los derechos reservados.</p>
   </div>
 </footer>
 
