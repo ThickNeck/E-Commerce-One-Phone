@@ -13,6 +13,10 @@ body {
   height: 1.7rem;
 }
 
+.breadcrumb {
+  text-underline-offset: 0.5rem;
+}
+
 /*
 #background {
   background-position: center center;
