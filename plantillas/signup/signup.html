@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONE PHONE - Accesorios y Gadgets</title>
+  <link rel="stylesheet" href="../../bootstrap-files/bootstrap.css">
+  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="../gralStyle.css">
+</head>
+
+<body>
+
+<!-- BARRA DE NAVEGACIÓN -->
+<nav id="barraNav" class="navbar navbar-expand-sm navbar-dark sticky-top">
+  <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="../../plantillas/index/index.html">
+          <img id="logo" class="img-fluid" src="../../imagenes/logo.png" alt="" srcset="">
+      </a>
+      <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse gap-2" id="navbarSearch">
+          <form class="d-flex flex-grow-1 pt-3 pt-sm-0">
+              <input class="form-control rounded-0" type="search" placeholder="Buscar productos..." aria-label="Buscar">
+              <a class="btn btn-primary rounded-0 d-flex justify-content-center align-items-center" type="submit">
+                  <img class="search-icon" src="../../imagenes/search.svg" alt="">
+              </a>
+          </form>
+          <ul class="navbar-nav ms-2 gap-2">
+              <li class="nav-item">
+                  <a class="nav-link active d-flex align-items-center" aria-current="page" href="#">
+                      <img class="search-icon" src="../../imagenes/account.svg" alt="">
+                      <span class="ps-2 d-sm-none">Mi cuenta</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active d-flex align-items-center" href="#">
+                      <img class="search-icon" src="../../imagenes/cart.svg" alt="">
+                      <span class="ps-2 d-sm-none">Carrito</span>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<!-- BREADCRUMBS -->
+<nav class="ps-4 pt-3" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item text-light"><a href="#">Inicio</a></li>
+    <li class="breadcrumb-item text-light"><a href="../login/login.html">Ingreso</a></li>
+    <li class="breadcrumb-item text-light active" aria-current="page">Registro</li>
+  </ol>
+</nav>
+
+<!--  FORM DE REGISTRO -->
+<div class="container-fluid pb-3">
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-8">
+        <div class="card border border-primary border-2">
+          <div class="card-body">
+            <h5 class="card-title text-center">Registro de usuario</h5>
+            <form class="pt-3">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="input1" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="input1" placeholder="Ingresa tu nombre...">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="input2" class="form-label">Teléfono:</label>
+                      <input type="tel" class="form-control" id="input2" placeholder="Ingresa tu teléfono...">
+                    </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="input3" class="form-label">Contraseña:</label>
+                    <input type="password" class="form-control" id="input3" placeholder="Ingresa tu contraseña...">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="input4" class="form-label">Confirmar contraseña:</label>
+                    <input type="password" class="form-control" id="input4" placeholder="Confirmar contraseña...">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                    <div class="mb-3">
+                      <label for="input5" class="form-label">Email:</label>
+                      <input type="email" class="form-control" id="input5" placeholder="Ingresa tu email...">
+                    </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">Crear cuenta</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- PIE DE PÁGINA -->
+<footer class="text-light py-3">
+  <div class="container">
+      <div class="row">
+          <!-- Sección de contacto -->
+          <div class="col-md-4">
+              <h5>Contacto:</h5>
+              <ul class="list-unstyled">
+                  <li class="py-1">Email: <i class="bi bi-envelope">rumbomanuel@hotmail.com</i></li>
+                  <li class="py-1">Teléfono: <i class="bi bi-telephone">2494584409</i></li>
+                  <li class="py-1">Dirección: <i class="bi bi-whatsapp">9 de Julio 171, Tandil, Buenos Aires</i></li>
+              </ul>
+          </div>
+          <!-- Sección de soporte -->
+          <div class="col-md-4">
+              <h5>Soporte:</h5>
+              <ul class="list-unstyled">
+                <li><a class="btn btn-light my-2" href="../contact/contact.html">Contactanos vía mensaje directo</a></li>
+              </ul>
+          </div>
+          <!-- Sección de redes -->
+          <div class="col-md-4">
+            <h5>Redes:</h5>
+            <ul class="list-unstyled">
+              <li class="py-1">
+                  <a class="text-light link-offset-2 d-inline-flex align-items-center" target="_blank" href="https://facebook.com/ww.facebook.com/OnePhonee/m/OnePhonee/">
+                      <img class="search-icon" src="../../imagenes/facebook.svg" alt="">
+                      <span class="ps-2">Facebook</span>
+                  </a>
+              </li>
+              <li class="py-1">
+                  <a class="text-light link-offset-2 d-inline-flex align-items-center" target="_blank" href="https://instagram.com/www.instagram.com/onephonee/">
+                      <img class="search-icon" src="../../imagenes/instagram.svg" alt="">
+                      <span class="ps-2">Instagram</span>
+                  </a>
+              </li>
+              <li class="py-1">
+                  <a class="text-light link-offset-2 d-inline-flex align-items-center" target="_blank" href="https://tiktok.com/@elpibitoonephone">
+                      <img class="search-icon" src="../../imagenes/tiktok.svg" alt="">
+                      <span class="ps-2">Tik Tok</span>
+                  </a>
+              </li>
+            </ul>
+        </div>
+      </div>
+  </div>
+  <!-- Barra inferior del footer -->
+  <div class="bg-secondary text-center py-3">
+      <p class="my-0">© 2024 Mi E-Commerce. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="../../bootstrap-files/bootstrap.bundle.js"></script>
+</body>
+</html>
