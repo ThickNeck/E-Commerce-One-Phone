@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ONE PHONE - Accesorios y Gadgets</title>
   <link rel="stylesheet" href="../../bootstrap-files/bootstrap.css">
-  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="cart.css">
   <link rel="stylesheet" href="../gralStyle.css">
 </head>
 
@@ -49,70 +49,87 @@
 <nav class="ps-4 pt-3" aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item text-light"><a href="#">Inicio</a></li>
-    <li class="breadcrumb-item text-light"><a href="../login/login.html">Ingreso</a></li>
-    <li class="breadcrumb-item text-light active" aria-current="page">Registro</li>
+    <li class="breadcrumb-item text-light"> <a href="#">Mi cuenta</a></li>
+    <li class="breadcrumb-item text-light active" aria-current="page">Carrito</li>
   </ol>
 </nav>
 
-<!--  FORM DE REGISTRO -->
-<div class="container-fluid pb-3">
-    <div class="row justify-content-center">
-      <div class="col-12 col-sm-8">
-        <!-- Card de registro -->
-        <div class="card border border-primary border-2">
-          <div class="card-body">
-            <h5 class="card-title text-center">Registro de usuario</h5>
-            <form class="pt-3 position-relative">
-              
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="mb-3">
-                    <label for="input1" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="input1" placeholder="Ingresa tu nombre...">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="input2" class="form-label">Teléfono:</label>
-                      <input type="tel" class="form-control" id="input2" placeholder="Ingresa tu teléfono...">
-                    </div>
-                </div>
-              </div>
+<!-- CARRITO -->
+<div class="container-fluid">
+  <!-- Título -->
+  <div class="d-inline-flex align-items-center">
+    <h1 class="text-light">Carrito de Compras</h1>
+    <img id="cartIco" class="ps-2" src="../../imagenes/iconos/cart.svg" alt="">
+  </div>
+  <hr class="text-light"></hr>
 
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="mb-3">
-                    <label for="input3" class="form-label">Contraseña:</label>
-                    <input type="password" class="form-control" id="input3" placeholder="Ingresa tu contraseña...">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="mb-3">
-                    <label for="input4" class="form-label">Confirmar contraseña:</label>
-                    <input type="password" class="form-control" id="input4" placeholder="Confirmar contraseña...">
-                  </div>
-                </div>
-              </div>
+  <!-- Tabla de productos -->
+  <div class="table-responsive rounded-2">
+    <table class="table table-striped table-dark align-middle">
+      <!-- Encabezados -->
+      <thead>
+        <tr>
+          <th scope="col">Producto</th>
+          <th scope="col">Cantidad</th>
+          <th class="text-nowrap" scope="col">Precio Unitario</th>
+          <th scope="col">Subtotal</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
 
-              <div class="row">
-                <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="input5" class="form-label">Email:</label>
-                      <input type="email" class="form-control" id="input5" placeholder="Ingresa tu email...">
-                    </div>
-                </div>
-                <div class="col-md-6 d-inline-flex justify-content-start align-items-end">
-                  <div class="mb-3">
-                    <button type="submit" class="btn btn-primary">Crear cuenta</button>
-                  </div>
-                </div>                
-              </div>
+      <!-- Contenido -->
+      <tbody>
+        <!-- Prod.1 -->
+        <tr>
+            <td class="text-nowrap">Producto 1</td>
+            <td>
+              <input type="number" class="form-control" value="" min="1">
+            </td>
+            <td>xxx$</td>
+            <td>xxx$</td>
+            <td>
+              <button class="btn btn-danger btn-sm">Eliminar</button>
+            </td>
+        </tr>
 
-            </form>
-          </div>
-        </div>
-      </div>
+        <!-- Agregar más prod. según sea necesario -->
+        <tr>
+            <td class="text-nowrap">Producto n</td>
+            <td>
+              <input type="number" class="form-control" value="" min="1">
+            </td>
+            <td>xxx$</td>
+            <td>xxx$</td>
+            <td>
+              <button class="btn btn-danger btn-sm">Eliminar</button>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <hr class="text-light">
+
+  <!-- Sección de cupones -->
+  <div class="row">
+    <div class="col-sm-6">
+        <input type="text" class="form-control rounded-0 py-2 h-100" placeholder="Código de Cupón">
     </div>
+    <div class="col-sm-3 d-flex align-items-center">
+        <button class="btn btn-primary text-nowrap rounded-0 w-100 py-2 mt-2 mt-sm-0">Aplicar Cupón</button>
+        <img id="cuponIco" class="ps-2 mt-2 mt-sm-0" src="../../imagenes/iconos/coupon.svg" alt="">
+    </div>
+  </div>
+  <hr class="text-light">
+  
+  <!-- Resumen de precios -->
+  <div class="row pb-3">
+    <div class="col-sm-6">
+        <h4 class="text-light">Total: xxx$</h4>
+    </div>
+    <div class="col-sm-6">
+        <button class="btn btn-success btn-lg rounded-0">Proceder al Pago</button>
+    </div>
+  </div>
 </div>
 
 <!-- PIE DE PÁGINA -->
@@ -166,7 +183,7 @@
       <p class="my-0">© 2024 Mi E-Commerce. Todos los derechos reservados.</p>
   </div>
 </footer>
-
-<script src="../../bootstrap-files/bootstrap.bundle.js"></script>
+  
+<script src="../../bootstrap-files/bootstrap.bundle.js"></script> 
 </body>
 </html>

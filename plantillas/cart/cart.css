@@ -1,0 +1,11 @@
+main {
+  min-height: 50vh;
+}
+
+#cartIco, #cuponIco {
+  height: 3rem;
+}
+
+td input {
+  min-width: 10rem;
+}

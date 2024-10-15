@@ -3,14 +3,13 @@
 body {
   background: linear-gradient(135deg, #000000, #0d1a3b, #183d66, #2578a9);
 }
-
 #logo {
-  height: 2.5rem;
+  height: 3rem;
 }
 
 .search-icon {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .breadcrumb {
@@ -35,4 +34,8 @@ body {
 
 #barraNav, footer {
   background-color: #0d1326
+}
+
+#barraNav ul a:hover {
+  background-color: #ffffff34;
 }
