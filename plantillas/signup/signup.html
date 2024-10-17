@@ -50,7 +50,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item text-light"><a href="#">Inicio</a></li>
     <li class="breadcrumb-item text-light"><a href="../login/login.html">Ingreso</a></li>
-    <li class="breadcrumb-item text-light active" aria-current="page">Registro</li>
+    <li class="breadcrumb-item text-light" aria-current="page">Registro</li>
   </ol>
 </nav>
 
@@ -62,19 +62,21 @@
         <div class="card border border-primary border-2">
           <div class="card-body">
             <h5 class="card-title text-center">Registro de usuario</h5>
-            <form class="pt-3 position-relative">
-              
+            <hr class="text-dark">
+            
+            <!-- Formulario -->
+            <form>
               <div class="row">
                 <div class="col-md-6">
                   <div class="mb-3">
                     <label for="input1" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="input1" placeholder="Ingresa tu nombre...">
+                    <input type="text" class="form-control border-primary" id="input1" placeholder="Ingresa tu nombre...">
                   </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-3">
                       <label for="input2" class="form-label">Teléfono:</label>
-                      <input type="tel" class="form-control" id="input2" placeholder="Ingresa tu teléfono...">
+                      <input type="tel" class="form-control border-primary" id="input2" placeholder="Ingresa tu teléfono...">
                     </div>
                 </div>
               </div>
@@ -83,13 +85,13 @@
                 <div class="col-md-6">
                   <div class="mb-3">
                     <label for="input3" class="form-label">Contraseña:</label>
-                    <input type="password" class="form-control" id="input3" placeholder="Ingresa tu contraseña...">
+                    <input type="password" class="form-control border-primary" id="input3" placeholder="Ingresa tu contraseña...">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="mb-3">
                     <label for="input4" class="form-label">Confirmar contraseña:</label>
-                    <input type="password" class="form-control" id="input4" placeholder="Confirmar contraseña...">
+                    <input type="password" class="form-control border-primary" id="input4" placeholder="Confirmar contraseña...">
                   </div>
                 </div>
               </div>
@@ -98,17 +100,18 @@
                 <div class="col-md-6">
                     <div class="mb-3">
                       <label for="input5" class="form-label">Email:</label>
-                      <input type="email" class="form-control" id="input5" placeholder="Ingresa tu email...">
+                      <input type="email" class="form-control border-primary" id="input5" placeholder="Ingresa tu email...">
                     </div>
                 </div>
                 <div class="col-md-6 d-inline-flex justify-content-start align-items-end">
-                  <div class="mb-3">
+                  <div class="mb-2 mb-md-3">
                     <button type="submit" class="btn btn-primary">Crear cuenta</button>
                   </div>
                 </div>                
               </div>
 
             </form>
+
           </div>
         </div>
       </div>
@@ -119,42 +122,52 @@
 <footer class="text-light py-3">
   <div class="container">
       <div class="row">
-          <!-- Sección de contacto -->
+          <!-- Sección de medios -->
           <div class="col-md-4">
-              <h5>Contacto:</h5>
+              <h5>Medios de pago:</h5>
               <ul class="list-unstyled">
-                  <li class="py-1">Email: <i class="bi bi-envelope">rumbomanuel@hotmail.com</i></li>
-                  <li class="py-1">Teléfono: <i class="bi bi-telephone">2494584409</i></li>
-                  <li class="py-1">Dirección: <i class="bi bi-whatsapp">9 de Julio 171, Tandil, Buenos Aires</i></li>
+                  <li class="pb-1 d-flex align-items-center gap-2">
+                    <img class="pay-icon" src="../../imagenes/iconos/mercadopago.svg" alt="">
+                    <p class="m-0">MercadoPago</p>
+                  </li>
+                  <li class="pb-1 d-flex align-items-center gap-2">
+                    <img class="pay-icon" src="../../imagenes/iconos/visa.svg">
+                    <p class="m-0">Visa</p>
+                  </li>
+                  <li class="pb-1 d-flex align-items-center gap-2">
+                    <img class="pay-icon" src="../../imagenes/iconos/americanexp.svg">
+                    <p class="m-0">American Express</p>
+                  </li>
               </ul>
           </div>
+
           <!-- Sección de soporte -->
           <div class="col-md-4">
-              <h5>Soporte:</h5>
-              <ul class="list-unstyled">
-                <li><a class="btn btn-light my-2" href="../contact/contact.html">Contactanos vía mensaje directo</a></li>
-              </ul>
+            <h5>Soporte:</h5>
+            <p class="mb-2">¿Tenés una consulta?</p>
+            <a class="btn btn-light" href="../contact/contact.html">Contactanos vía mensaje directo</a>
           </div>
+
           <!-- Sección de redes -->
           <div class="col-md-4">
             <h5>Redes:</h5>
             <ul class="list-unstyled">
-              <li class="py-1">
-                  <a class="text-light link-offset-2 d-inline-flex align-items-center" target="_blank" href="https://facebook.com/ww.facebook.com/OnePhonee/m/OnePhonee/">
-                      <img class="search-icon" src="../../imagenes/facebook.svg" alt="">
-                      <span class="ps-2">Facebook</span>
+              <li class="pb-1">
+                  <a class="text-light link-offset-2 d-inline-flex align-items-center gap-2" target="_blank" href="https://facebook.com/ww.facebook.com/OnePhonee/m/OnePhonee/">
+                      <img class="media-icon" src="../../imagenes/iconos/facebook.svg" alt="">
+                      <span>Facebook</span>
                   </a>
               </li>
-              <li class="py-1">
-                  <a class="text-light link-offset-2 d-inline-flex align-items-center" target="_blank" href="https://instagram.com/www.instagram.com/onephonee/">
-                      <img class="search-icon" src="../../imagenes/instagram.svg" alt="">
-                      <span class="ps-2">Instagram</span>
+              <li class="pb-1">
+                  <a class="text-light link-offset-2 d-inline-flex align-items-center gap-2" target="_blank" href="https://instagram.com/www.instagram.com/onephonee/">
+                      <img class="media-icon" src="../../imagenes/iconos/instagram.svg" alt="">
+                      <span>Instagram</span>
                   </a>
               </li>
-              <li class="py-1">
-                  <a class="text-light link-offset-2 d-inline-flex align-items-center" target="_blank" href="https://tiktok.com/@elpibitoonephone">
-                      <img class="search-icon" src="../../imagenes/tiktok.svg" alt="">
-                      <span class="ps-2">Tik Tok</span>
+              <li class="pb-1">
+                  <a class="text-light link-offset-2 d-inline-flex align-items-center gap-2" target="_blank" href="https://tiktok.com/@elpibitoonephone">
+                      <img class="media-icon" src="../../imagenes/iconos/tiktok.svg" alt="">
+                      <span>Tik Tok</span>
                   </a>
               </li>
             </ul>

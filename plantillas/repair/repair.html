@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ONE PHONE - Accesorios y Gadgets</title>
   <link rel="stylesheet" href="../../bootstrap-files/bootstrap.css">
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="repair.css">
   <link rel="stylesheet" href="../gralStyle.css">
 </head>
 
 <body>
-
+  
 <!-- BARRA DE NAVEGACIÓN -->
 <nav id="barraNav" class="navbar navbar-expand-sm navbar-dark sticky-top">
   <div class="container-fluid">
@@ -48,56 +48,77 @@
 <!-- BREADCRUMBS -->
 <nav class="ps-4 pt-3" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item text-light"><a href="../index/index.html">Inicio</a></li>
-    <li class="breadcrumb-item text-light" aria-current="page">Contacto</li>
+    <li class="breadcrumb-item text-light"><a href="#">Inicio</a></li>
+    <li class="breadcrumb-item text-light" aria-current="page">Reparación</li>
   </ol>
 </nav>
 
-<!-- INFO Y FORM -->
-<div class="container-fluid d-flex flex-wrap text-light">
-  <!-- Info. de contacto -->
-  <div class="col-12 col-md-4 px-2 px-md-4">
-    <h4>Información</h4>
+<!-- PRESUPUESTO -->
+<div class="container-fluid pb-3">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-8">
+      <h2 class="text-light">Solicitud de reparación</h2>
+      <hr>
+      <div class="card border border-primary border-2">
+        <div class="card-body">
+          <!-- Formulario -->
+          <form>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="input1" class="form-label">Nombre:</label>
+                  <input type="text" class="form-control border-primary" id="input1" placeholder="Ingresa tu nombre...">
+                </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="input2" class="form-label">Email:</label>
+                    <input type="email" class="form-control border-primary" id="input2" placeholder="Ingresa tu email...">
+                  </div>
+              </div>
+            </div>
 
-    <h6 class="pt-2">Contacto:</h6>
-    <p class="my-0">- Teléfono:</p>
-    <p class="my-0">2494584409</p>
-    <p class="mt-2 mb-0">- Email:</p>
-    <p class="my-0">rumbomanuel@hotmail.com</p>
-    <hr>
-    <h6>Dirección:</h6>
-    <p class="my-0">9 de Julio 171</p>
-    <p class="my-0">Tandil, Buenos Aires</p>
-    <hr>
-    <h6>Horarios de atención:</h6>
-    <p class="my-0">9:30 AM - 1 PM</p>
-    <p class="my-0">4:30 PM - 8:30 PM</p>
-  </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="input3" class="form-label">Marca del celular:</label>
+                  <input type="text" class="form-control border-primary" id="input3" placeholder="Ej: Samsung, Apple, Huawei...">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="input4" class="form-label">Modelo del celular:</label>
+                  <input type="text" class="form-control border-primary" id="input4" placeholder="Ingresa el modelo de tu celular...">
+                </div>
+              </div>
+            </div>
 
-  <!-- Form e iframe -->
-  <div class="col-12 col-md-8 py-4 pt-md-0 px-2 px-md-3">
-    <form>
-      <div class="row g-2">
-        <div class="col-md-4">
-          <input class="form-control py-3 rounded-0" id="InputNombre" placeholder="Nombre" type="text" aria-describedby="emailHelp">
-        </div>
-        <div class="col-md-8">
-          <input class="form-control mt-md-0 py-3 rounded-0" id="exampleInputEmail1" placeholder="Email" type="email" aria-describedby="emailHelp">
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="input5" class="form-label">Teléfono alternativo de contacto:</label>
+                    <input type="tel" class="form-control border-primary" id="input5" placeholder="Ingresa tu teléfono...">
+                  </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="problema" class="form-label">Descripción del Problema:</label>
+                  <textarea class="form-control border-primary" id="problema" rows="4" placeholder="Describe el problema de tu celular..." required></textarea>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 d-flex align-items-center justify-content-center">
+              <div class="col-8">
+                <button type="submit" class="btn btn-primary w-100">Solicitar presupuesto</button>
+              </div>
+            </div> 
+
+          </form>
         </div>
       </div>
-
-      <div class="mt-2">
-        <div class="form-floating text-dark">
-          <textarea class="form-control rounded-0" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
-          <label for="floatingTextarea2">Dejá tu mensaje acá...</label>
-        </div>
-      </div>
-      <button class="col-12 mt-3 py-2 btn btn-primary rounded-0" type="submit">Enviar</button>
-    </form>
-    <hr>
-    <iframe class="col-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.485578773887!2d-59.132013099999995!3d-37.3310113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911fbe1cfb88db%3A0xbca4769123679ef0!2s9%20de%20Julio%20171%2C%20B7000%20Tandil%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1728525906325!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
-
 </div>
 
 <!-- PIE DE PÁGINA -->
@@ -162,6 +183,6 @@
   </div>
 </footer>
 
-<script src="../../bootstrap-files/bootstrap.bundle.js"></script>
+<script src="../../bootstrap-files/bootstrap.bundle.js"></script> 
 </body>
 </html>

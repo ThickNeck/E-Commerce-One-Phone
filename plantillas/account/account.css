@@ -1,0 +1,19 @@
+#cardLateral {
+  position: sticky;
+  top: 8.5rem;
+}
+
+/* Estilos para los enlaces del menú lateral */
+.list-group-item {
+  color: #212529;
+  transition: color 0.3s, background-color 0.3s; /* Transición suave para los efectos */
+}
+
+/* Efecto al pasar el ratón por encima (hover) */
+.list-group-item:hover {
+  background-color: #0d6dfd80
+}
+/* Efecto de enlace activo (scrollspy o clic) */
+.list-group-item:active {
+  background-color: #0d6efd; /* Azul de Bootstrap */
+}

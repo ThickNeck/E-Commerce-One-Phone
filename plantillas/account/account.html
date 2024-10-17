@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ONE PHONE - Accesorios y Gadgets</title>
   <link rel="stylesheet" href="../../bootstrap-files/bootstrap.css">
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="account.css">
   <link rel="stylesheet" href="../gralStyle.css">
 </head>
 
@@ -48,57 +48,127 @@
 <!-- BREADCRUMBS -->
 <nav class="ps-4 pt-3" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item text-light"><a href="../index/index.html">Inicio</a></li>
-    <li class="breadcrumb-item text-light" aria-current="page">Contacto</li>
+    <li class="breadcrumb-item text-light"><a href="#">Inicio</a></li>
+    <li class="breadcrumb-item text-light">Ingreso</li>
+    <li class="breadcrumb-item text-light" aria-current="page">Mi Cuenta</li>
   </ol>
 </nav>
 
-<!-- INFO Y FORM -->
-<div class="container-fluid d-flex flex-wrap text-light">
-  <!-- Info. de contacto -->
-  <div class="col-12 col-md-4 px-2 px-md-4">
-    <h4>Información</h4>
+<!-- CUENTA -->
+<main class="container">
+  <div class="row">
 
-    <h6 class="pt-2">Contacto:</h6>
-    <p class="my-0">- Teléfono:</p>
-    <p class="my-0">2494584409</p>
-    <p class="mt-2 mb-0">- Email:</p>
-    <p class="my-0">rumbomanuel@hotmail.com</p>
-    <hr>
-    <h6>Dirección:</h6>
-    <p class="my-0">9 de Julio 171</p>
-    <p class="my-0">Tandil, Buenos Aires</p>
-    <hr>
-    <h6>Horarios de atención:</h6>
-    <p class="my-0">9:30 AM - 1 PM</p>
-    <p class="my-0">4:30 PM - 8:30 PM</p>
-  </div>
+    <!-- Barra lateral -->
+    <div class="col-md-4">
+      <div id="cardLateral" class="card mb-4 w-100" id="menu-sidebar">
+        <div class="card-header bg-primary">
+          <h5 class="m-0 text-light">Menú de Cuenta</h5>
+        </div>
+        <!-- Lista del menú -->
+        <div class="list-group list-group-flush d-flex flex-column">
+          <a href="#mis-pedidos" class="list-group-item py-2 ps-3">Mis Pedidos</a>
+          <a href="#mi-perfil" class="list-group-item py-2 ps-3">Mi Perfil</a>
+          <a href="#mis-direcciones" class="list-group-item py-2 ps-3">Mis Direcciones</a>
+          <a href="#metodos-pago" class="list-group-item py-2 ps-3">Métodos de Pago</a>
+          <a href="#historial-compras" class="list-group-item py-2 ps-3">Historial de Compras</a>
+          <a href="#cerrar-sesion" class="list-group-item py-2 ps-3">Cerrar Sesión</a>
+        </div>
 
-  <!-- Form e iframe -->
-  <div class="col-12 col-md-8 py-4 pt-md-0 px-2 px-md-3">
-    <form>
-      <div class="row g-2">
-        <div class="col-md-4">
-          <input class="form-control py-3 rounded-0" id="InputNombre" placeholder="Nombre" type="text" aria-describedby="emailHelp">
-        </div>
-        <div class="col-md-8">
-          <input class="form-control mt-md-0 py-3 rounded-0" id="exampleInputEmail1" placeholder="Email" type="email" aria-describedby="emailHelp">
-        </div>
       </div>
+    </div>
 
-      <div class="mt-2">
-        <div class="form-floating text-dark">
-          <textarea class="form-control rounded-0" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
-          <label for="floatingTextarea2">Dejá tu mensaje acá...</label>
+    <!-- Panel principal -->
+    <div class="col-md-8">
+      <h2 class="text-light">Mi cuenta</h2>
+
+      <!-- Sección: Mis Pedidos -->
+      <section id="mis-pedidos" class="pb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Mis Pedidos en Proceso</h5>
+            <p class="card-text">Aquí puedes ver el estado de tus pedidos:</p>
+            <ul>
+              <li>Pedido #12345 - Entregado</li>
+              <li>Pedido #67890 - En Proceso</li>
+              <li>Pedido #54321 - Cancelado</li>
+            </ul>
+            <button class="btn btn-danger">Botón de Arrepentimiento</button>
+          </div>
         </div>
-      </div>
-      <button class="col-12 mt-3 py-2 btn btn-primary rounded-0" type="submit">Enviar</button>
-    </form>
-    <hr>
-    <iframe class="col-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.485578773887!2d-59.132013099999995!3d-37.3310113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911fbe1cfb88db%3A0xbca4769123679ef0!2s9%20de%20Julio%20171%2C%20B7000%20Tandil%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1728525906325!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+      </section>
 
-</div>
+      <!-- Sección: Mi Perfil -->
+      <section id="mi-perfil" class="pb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Mi Perfil</h5>
+            <p class="card-text">Aquí puedes gestionar los datos de tu perfil.</p>
+            <p>Nombre: Santiago Rogelio Cuña</p>
+            <p>Email: santi.cunia@example.com</p>
+            <p>Contraseña: *****</p>
+            <a href="#" class="btn btn-primary">Editar Perfil</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Mis Direcciones -->
+      <section id="mis-direcciones" class="pb-3" data>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Mis Direcciones</h5>
+            <p class="card-text">Gestión de las direcciones de envío.</p>
+            <ul>
+              <li>Casa: Calle Falsa 123</li>
+              <li>Oficina: Avenida Siempre Viva 456</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Editar Direcciones</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Métodos de Pago -->
+      <section id="metodos-pago" class="pb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Métodos de Pago</h5>
+            <p class="card-text">Aquí puedes gestionar tus tarjetas y métodos de pago.</p>
+            <ul>
+              <li>Visa **** 1234</li>
+              <li>Mastercard **** 5678</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Añadir Método de Pago</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Historial de Compras -->
+      <section id="historial-compras" class="pb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Historial de Compras</h5>
+            <p class="card-text">Aquí puedes revisar todas tus compras realizadas.</p>
+            <ul>
+              <li>Pedido #12345 - 01/01/2024</li>
+              <li>Pedido #67890 - 15/01/2024</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Cerrar Sesión -->
+      <section id="cerrar-sesion" class="pb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Cerrar Sesión</h5>
+            <p class="card-text">¿Estás seguro de que deseas cerrar sesión?</p>
+            <a href="#" class="btn btn-danger">Cerrar Sesión</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+</main>
 
 <!-- PIE DE PÁGINA -->
 <footer class="text-light py-3">
@@ -162,6 +232,6 @@
   </div>
 </footer>
 
-<script src="../../bootstrap-files/bootstrap.bundle.js"></script>
+<script src="../../bootstrap-files/bootstrap.bundle.js"></script> 
 </body>
 </html>
