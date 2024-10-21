@@ -2,8 +2,12 @@ main {
   min-height: 50vh;
 }
 
-#cartIco, #cuponIco {
+#cartIco {
   height: 3rem;
+}
+
+#cuponIco {
+  height: 4rem;
 }
 
 td input {
