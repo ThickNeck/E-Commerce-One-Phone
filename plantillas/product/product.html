@@ -59,7 +59,7 @@
     <!-- Fila principal del producto -->
     <div class="row">
         <!-- Columna del carrusel de imágenes del producto -->
-        <div class="col-md-6">
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
             <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <!-- Imagen 1 del carrusel -->
@@ -71,7 +71,7 @@
                         <img src="https://via.placeholder.com/400x400?text=Producto+2" class="d-block w-100" alt="Producto 2">
                     </div>
                     <!-- Imagen 3 del carrusel -->
-                    <div class="carousel-item">
+                    <div class="carousel-item"> 
                         <img src="https://via.placeholder.com/400x400?text=Producto+3" class="d-block w-100" alt="Producto 3">
                     </div>
                 </div>
@@ -95,8 +95,7 @@
             </p>
             <h3 class="text-success">xxx$</h3>
             <div class="d-grid gap-2 pt-3">
-                <button class="btn btn-primary btn-lg">Comprar Ahora</button>
-                <button class="btn btn-secondary btn-lg">Añadir al Carrito</button>
+                <button class="btn btn-primary btn-lg">Añadir al carrito</button>
             </div>
             <!-- Detalles adicionales del producto -->
             <ul class="list-group list-group-flush mt-3 border border-primary" data-bs-theme="dark">
@@ -120,39 +119,88 @@
 
     <!-- Sección de reseñas -->
     <div class="row">
-        <div class="col-md-12">
-            <h2>Reseñas del Producto</h2>
-            <!-- Reseña 1 -->
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Salvador Ramírez Cruz</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eius commodi repellat voluptates consequuntur, repellendus, placeat quidem velit porro laboriosam quia dignissimos, labore doloremque impedit a consectetur hic suscipit inventore?</p>
-                    <p class="text-muted">Publicado el <span class="date text-primary">01/10/2024</span></p>
+      <div class="col-12">
+          <h2>Reseñas del Producto</h2>
+      </div>
+
+      <!-- Reseña 1 -->
+      <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-3">
+          <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                  <h5 class="card-title d-flex align-items-center gap-2">
+                      Salvador Ramírez Cruz
+                      <!-- Puntuación en estrellas -->
+                      <span class="text-warning">★★★★★</span>
+                  </h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eius commodi repellat voluptates consequuntur, repellendus, placeat quidem velit porro laboriosam quia dignissimos, labore doloremque impedit a consectetur hic suscipit inventore?</p>
+                  <p class="text-muted">Publicado el <span class="date text-primary">01/10/2024</span></p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Reseña 2 -->
+      <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-3">
+          <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                  <h5 class="card-title d-flex align-items-center gap-2">
+                      Gerardo Díaz
+                      <span class="text-warning">★★★★☆</span>
+                  </h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum labore expedita ullam rem! Voluptates commodi saepe temporibus. Ut cum id adipisci a eum, numquam nulla, officia architecto tenetur accusamus quidem?</p>
+                  <p class="text-muted">Publicado el <span class="date text-primary">15/09/2024</span></p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Añadir más reseñas en columnas según sea necesario -->
+      <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-3">
+          <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                  <h5 class="card-title d-flex align-items-center gap-2">
+                      - NPC -
+                      <span class="text-warning">★★★☆☆</span>
+                  </h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nihil eum exercitationem ratione autem, dolores placeat voluptatum at et fuga necessitatibus explicabo quisquam numquam maiores quo modi vitae! Possimus, iste!</p>
+                  <p class="text-muted">Publicado el <span class="date text-primary">xx/xx/20xx</span></p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Botón para añadir reseña -->
+      <div>
+          <button class="btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#addReviewForm" aria-expanded="false" aria-controls="addReviewForm">Añadir Reseña</button>
+      </div>
+
+      <!-- Formulario para añadir reseña -->
+      <div class="collapse col-12" id="addReviewForm">
+        <form>
+            <div class="row">
+                <!-- Nombre y calificación -->
+                <div class="col-md-6 mt-3">
+                    <div class="mb-3">
+                        <input type="text" class="form-control rounded-0 py-3" id="reviewerName" placeholder="Ingresa tu nombre..." required>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select rounded-0 py-3" id="rating" required>
+                            <option value="" selected>Selecciona una calificación</option>
+                            <option value="5">★★★★★ - Excelente</option>
+                            <option value="4">★★★★☆ - Muy bueno</option>
+                            <option value="3">★★★☆☆ - Bueno</option>
+                            <option value="2">★★☆☆☆ - Regular</option>
+                            <option value="1">★☆☆☆☆ - Malo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Reseña -->
+                <div class="col-md-6 mt-3">
+                  <textarea class="form-control rounded-0 py-3" id="resenia" rows="5" placeholder="Escribe tu reseña aquí..." required></textarea>
                 </div>
             </div>
+            <button type="submit" class="btn btn-primary">Enviar Reseña</button>
+        </form>
+      </div>
 
-            <!-- Reseña 2 -->
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Gerardo Díaz</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum labore expedita ullam rem! Voluptates commodi saepe temporibus. Ut cum id adipisci a eum, numquam nulla, officia architecto tenetur accusamus quidem?</p>
-                    <p class="text-muted">Publicado el <span class="date text-primary">15/09/2024</span></p>
-                </div>
-            </div>
-
-            <!-- Añadir más reseñas según sea necesario -->
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">- NPC -</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nihil eum exercitationem ratione autem, dolores placeat voluptatum at et fuga necessitatibus explicabo quisquam numquam maiores quo modi vitae! Possimus, iste!</p>
-                    <p class="text-muted">Publicado el <span class="date text-primary">xx/xx/20xx</span></p>
-                </div>
-            </div>
-
-            <div class="d-grid gap-2">
-                <button class="btn btn-outline-primary">Añadir Reseña</button>
-            </div>
-        </div>
     </div>
     <hr>
 
@@ -165,7 +213,11 @@
                 <div class="card-body">
                     <h5 class="card-title">Sabrina Rodríguez Casa</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi adipisci libero, est praesentium accusantium, incidunt perferendis quo, rem assumenda reiciendis aliquid atque omnis quidem repellat nostrum minus id ex pariatur.</p>
-                    <p class="text-muted">Publicado el <span class="date text-primary">02/10/2024</span></p>
+                    <p class="text-muted mb-0">Publicado el <span class="date text-primary">02/10/2024</span></p>
+                </div>
+                <div class="card-footer bg-light">
+                  <h6>Respuesta del vendedor:</h6>
+                  <p class="m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et blanditiis, voluptatibus itaque officiis tempora quos minima dolores doloremque maxime consequatur praesentium perspiciatis ipsum quae corrupti eius esse a. Autem, neque!</p>
                 </div>
             </div>
 
@@ -174,7 +226,11 @@
                 <div class="card-body">
                     <h5 class="card-title">Gabriela Durán</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus necessitatibus tenetur voluptatum fugit nihil cumque doloremque optio provident ratione sunt dolores ex, consectetur similique voluptatem ad libero repudiandae inventore. Voluptatem?</p>
-                    <p class="text-muted">Publicado el <span class="date text-primary">28/09/2024</span></p>
+                    <p class="text-muted mb-0">Publicado el <span class="date text-primary">28/09/2024</span></p>
+                </div>
+                <div class="card-footer bg-light">
+                  <h6>Respuesta del vendedor:</h6>
+                  <p class="m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et blanditiis, voluptatibus itaque officiis tempora quos minima dolores doloremque maxime consequatur praesentium perspiciatis ipsum quae corrupti eius esse a. Autem, neque!</p>
                 </div>
             </div>
 
@@ -183,16 +239,21 @@
                 <div class="card-body">
                     <h5 class="card-title">- NPC -</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quas laborum tempore, amet error repudiandae facilis laboriosam voluptatibus quibusdam ut reiciendis! Quis excepturi ipsa ullam quisquam nulla error molestias eaque.</p>
-                    <p class="text-muted">Publicado el <span class="date text-primary">xx/xx/20xx</span></p>
+                    <p class="text-muted mb-0">Publicado el <span class="date text-primary">xx/xx/20xx</span></p>
+                </div>
+                <div class="card-footer bg-light">
+                  <h6>Respuesta del vendedor:</h6>
+                  <p class="m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et blanditiis, voluptatibus itaque officiis tempora quos minima dolores doloremque maxime consequatur praesentium perspiciatis ipsum quae corrupti eius esse a. Autem, neque!</p>
                 </div>
             </div>
 
+            <!-- Formulario de consulta -->
             <form>
                 <div class="mb-3">
                     <label for="consulta" class="form-label fs-5">Escribe tu consulta:</label>
-                    <textarea class="form-control rounded-0" id="consulta" placeholder="Escribe aquí tu pregunta..."></textarea>
+                    <textarea class="form-control rounded-0 py-3" id="consulta" placeholder="Escribe aquí tu pregunta..."></textarea>
                 </div>
-                <button type="submit" class="btn btn-outline-primary">Enviar Consulta</button>
+                <button type="submit" class="btn btn-outline-light">Enviar Consulta</button>
             </form>
         </div>
     </div>
