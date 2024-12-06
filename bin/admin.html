@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE PHONE - Accesorios y Gadgets</title>
+    <link rel="stylesheet" href="../assets/css/libs/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/gralStyle.css">
+</head>
+
+<body>
+
+<!-- BARRA NAVEGACIÓN -->
+<nav id="barraNav" class="navbar navbar-expand-sm navbar-dark sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+            <img id="logo" class="img-fluid" src="../assets/images/logo.png" alt="One Phone Logo" srcset="">
+        </a>
+        <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse gap-2" id="navbarSearch">
+            <form class="d-flex flex-grow-1 pt-3 pt-sm-0">
+                <input class="form-control rounded-0" type="search" placeholder="Buscar productos..." aria-label="Buscar">
+                <a class="btn btn-primary rounded-0 d-flex justify-content-center align-items-center" type="submit">
+                    <img class="search-icon" src="../assets/images/icons/search.svg" alt="">
+                </a>
+            </form>
+            <ul class="navbar-nav ms-2 gap-2 align-items-center">
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-primary d-inline-flex align-items-center" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <img src="../assets/images/icons/login.svg" alt="">
+                        <span class="ps-2 d-sm-none">Mi cuenta</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-primary d-inline-flex align-items-center" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <img src="../assets/images/icons/cart.svg" alt="">
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ADMINISTRACIÓN -->
+<div class="container mt-4">
+    <!-- Administrador categorías -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5>Manage Categories</h5>
+        </div>
+        <div class="card-body">
+            <form id="category-form">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Category Name" id="category-name">
+                    <button class="btn btn-primary" type="button">Add Category</button>
+                </div>
+            </form>
+            <ul class="list-group" id="category-list">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Sample Category
+                    <div>
+                        <button class="btn btn-warning btn-sm">Edit</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Administrador productos -->
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">
+            <h5>Manage Products</h5>
+        </div>
+        <div class="card-body">
+            <form id="product-form">
+                <div class="mb-3">
+                    <label for="product-name" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="product-name" placeholder="Enter product name">
+                </div>
+                <div class="mb-3">
+                    <label for="product-price" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="product-price" placeholder="Enter product price">
+                </div>
+                <div class="mb-3">
+                    <label for="product-category" class="form-label">Category</label>
+                    <select class="form-select" id="product-category">
+                        <option selected>Choose a category</option>
+                        <option value="1">Category 1</option>
+                        <option value="2">Category 2</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-success">Add Product</button>
+            </form>
+            <ul class="list-group mt-3" id="product-list">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Sample Product - $100
+                    <div>
+                        <button class="btn btn-warning btn-sm">Edit</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Editor Info. Propietario -->
+    <div class="card mb-4">
+        <div class="card-header bg-info text-white">
+            <h5>Edit Contact Info</h5>
+        </div>
+        <div class="card-body">
+            <form id="contact-form">
+                <div class="mb-3">
+                    <label for="owner-phone" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="owner-phone" placeholder="Enter phone number">
+                </div>
+                <div class="mb-3">
+                    <label for="owner-email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="owner-email" placeholder="Enter email">
+                </div>
+                <button type="button" class="btn btn-info">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- PIE DE PÁGINA -->
+
+<script src="../js/libs/bootstrap.bundle.js"></script>
+</body>
+</html>

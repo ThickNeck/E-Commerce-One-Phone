@@ -5,220 +5,622 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ejemplo de modals con forms (OnePhone)</title>
   <link rel="stylesheet" href="../assets/css/libs/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/styles/product.css">
 </head>
 
-<body>
+<body style="background-color: rgb(10, 10, 70);">
 
 <!-- BOTONES DE ACTIVACIÓN -->
 <div class="container my-5">
-    <h1>Modals con Forms</h1>
+  <div class="pb-3">
+    <h3 class="text-light">Modal del footer:</h3>
+
+    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#contactOwnerModal">
+      Contactanos vía mensaje directo
+    </button>
+  </div>
+
+  <div class="pb-3">
+    <h3 class="text-light">Modals de la homepage:</h3>
 
     <!-- Botón para abrir modal de reparación -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#repairEstimateModal">
-        Solicitar Presupuesto de Reparación
+    <button type="button" class="btn btn-light text-primary fs-5" data-bs-toggle="modal" data-bs-target="#repairEstimateModal">
+      ¡Pedí tu presupuesto!
     </button>
 
-    <!-- Botón para abrir modal de contacto -->
-    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#contactOwnerModal">
-        Enviar Mensaje al Dueño
+    <!-- Botones para abrir modal de contacto -->
+    <button type="button" class="btn btn-light text-primary fs-5" data-bs-toggle="modal" data-bs-target="#contactOwnerModal">
+      ¡Contactanos!
     </button>
+  </div>
 
-    <!-- Botón para abrir modal de login -->
-    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#loginModal">
-        Iniciar Sesión
-    </button>
-</div>
+  <div class="pb-3">
+    <h3 class="text-light">Modals del navbar:</h3>
+    <div class="d-flex gap-2">
+      <!-- Botón para abrir modal de login -->
+      <p class="text-light">login:</p>
+      <button type="button" class="btn btn-outline-primary d-inline-flex align-items-center" data-bs-toggle="modal" data-bs-target="#loginModal">
+        <img src="../assets/images/icons/login.svg" alt="">
+      </button>
 
-<!-- Modal de reparación -->
-<div class="modal fade" id="repairEstimateModal" tabindex="-1" aria-labelledby="repairEstimateModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="repairEstimateModalLabel">Solicitá tu presupuesto de reparación</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="mb-3">
-                      <label for="input1" class="form-label">Nombre:</label>
-                      <input type="text" class="form-control border-primary" id="input1" placeholder="Ingresa tu nombre...">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                      <div class="mb-3">
-                        <label for="input2" class="form-label">Email:</label>
-                        <input type="email" class="form-control border-primary" id="input2" placeholder="Ingresa tu email...">
-                      </div>
-                  </div>
-                </div>
-    
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="mb-3">
-                      <label for="input3" class="form-label">Marca del celular:</label>
-                      <input type="text" class="form-control border-primary" id="input3" placeholder="Ej: Samsung, Apple, Huawei...">
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="mb-3">
-                      <label for="input4" class="form-label">Modelo del celular:</label>
-                      <input type="text" class="form-control border-primary" id="input4" placeholder="Ingresa el modelo de tu celular...">
-                    </div>
-                  </div>
-                </div>
-    
-                <div class="row">
-                  <div class="col-lg-6">
-                      <div class="mb-3">
-                        <label for="input5" class="form-label">Teléfono alternativo de contacto:</label>
-                        <input type="tel" class="form-control border-primary" id="input5" placeholder="Ingresa tu teléfono...">
-                      </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="mb-3">
-                      <label for="problema" class="form-label">Descripción del Problema:</label>
-                      <textarea class="form-control border-primary" id="problema" rows="4" placeholder="Describe el problema de tu celular..." required></textarea>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="col-12 d-flex align-items-center justify-content-center">
-                  <div class="col-8">
-                    <button type="submit" class="btn btn-primary w-100">Solicitar presupuesto</button>
-                  </div>
-                </div> 
-    
-              </form>
-            </div>
-        </div>
+      <!-- Botón para abrir modal de carrito -->
+      <p class="text-light">carrito:</p>
+      <button type="button" class="btn btn-outline-primary d-inline-flex align-items-center" data-bs-toggle="modal" data-bs-target="#cartModal">
+        <img src="../assets/images/icons/cart.svg" alt="">
+      </button>
+
+      <!-- Botón para abrir modal de usuario -->
+      <p class="text-light">usuario:</p>
     </div>
+  </div>
+
+  <div class="pb-3">
+    <h3 class="text-light">Modal de selección de producto:</h3>
+
+    <!-- Botón para abrir modal de producto -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">
+      Ver más
+    </button>
+  </div>
+
 </div>
 
-<!-- Modal de contacto -->
-<div class="modal fade" id="contactOwnerModal" tabindex="-1" aria-labelledby="contactOwnerModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="contactOwnerModalLabel">Envianos tu consulta</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body row">
-              <div class="col-lg-6">
-                <div>
-                  <h6 class="pt-2">Información de contacto:</h6>
-                  <p class="my-0">- Teléfono: 2494584409</p>
-                  <p class="mt-2 mb-0">- Email: rumbomanuel@hotmail.com</p>
-                </div>
-                <form class="pt-2">
-                  <h6 class="pt-2">Formulario de consulta:</h6>
-                  <div class="mb-2">
-                      <label for="senderName" class="form-label">Nombre:</label>
-                      <input type="text" class="form-control border-primary" id="senderName" placeholder="Ingresa tu nombre..." required>
+<!-- MODALS -->
+<div>
+  <!-- Modal de reparación -->
+  <div class="modal fade" id="repairEstimateModal" tabindex="-1" aria-labelledby="repairEstimateModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="repairEstimateModalLabel">Solicitá tu presupuesto de reparación</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="mb-3">
+                        <label for="input1" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control border-primary rounded-0" id="input1" placeholder="Ingresa tu nombre...">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                          <label for="input2" class="form-label">Email:</label>
+                          <input type="email" class="form-control border-primary rounded-0" id="input2" placeholder="Ingresa tu email...">
+                        </div>
+                    </div>
                   </div>
-                  <div class="mb-2">
-                      <label for="senderEmail" class="form-label">Email:</label>
-                      <input type="email" class="form-control border-primary" id="senderEmail" placeholder="Ingresa tu email..." required>
+      
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="mb-3">
+                        <label for="input3" class="form-label">Marca del celular:</label>
+                        <input type="text" class="form-control border-primary rounded-0" id="input3" placeholder="Ej: Samsung, Apple, Huawei...">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="mb-3">
+                        <label for="input4" class="form-label">Modelo del celular:</label>
+                        <input type="text" class="form-control border-primary rounded-0" id="input4" placeholder="Ingresa el modelo de tu celular...">
+                      </div>
+                    </div>
                   </div>
-                  <div class="mb-2">
-                      <label for="messageContent" class="form-label">Mensaje:</label>
-                      <textarea class="form-control border-primary" id="messageContent" rows="3" placeholder="Escribí tu mensaje..." required></textarea>
+      
+                  <div class="row">
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                          <label for="input5" class="form-label">Teléfono alternativo de contacto:</label>
+                          <input type="tel" class="form-control border-primary rounded-0" id="input5" placeholder="Ingresa tu teléfono...">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="mb-3">
+                        <label for="problema" class="form-label">Descripción del Problema:</label>
+                        <textarea class="form-control border-primary rounded-0" id="problema" rows="4" placeholder="Describe el problema de tu celular..." required></textarea>
+                      </div>
+                    </div>
                   </div>
-                  <button type="submit" class="btn btn-info">Enviar Mensaje</button>
+                  
+                  <div class="col-12 d-flex align-items-center justify-content-center">
+                    <div class="col-8">
+                      <button type="submit" class="btn btn-primary w-100">Solicitar presupuesto</button>
+                    </div>
+                  </div> 
+      
                 </form>
               </div>
-
-              <div class="col-lg-6 pt-3">
-                <h6 class="mb-1">Dirección y horarios de atención:</h6>
-                <p class="my-0">9 de Julio 171, Tandil, Buenos Aires</p>
-                <p class="my-0 pb-1">9:30 AM - 1 PM // 4:30 PM - 8:30 PM</p>
-                <iframe style="box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);" class="col-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.485578773887!2d-59.132013099999995!3d-37.3310113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911fbe1cfb88db%3A0xbca4769123679ef0!2s9%20de%20Julio%20171%2C%20B7000%20Tandil%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1728525906325!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal de login -->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="mb-2">
-                        <label for="loginEmail" class="form-label">Email:</label>
-                        <input type="email" class="form-control border-primary" id="loginEmail" placeholder="Ingresa tu email..." required>
-                    </div>
-                    <div class="mb-2">
-                        <label for="loginPassword" class="form-label">Contraseña:</label>
-                        <input type="password" class="form-control border-primary" id="loginPassword" placeholder="Ingresa tu contraseña..." required>
-                    </div>
-                    <button type="submit" class="btn btn-secondary">Iniciar Sesión</button>
-                </form>
-                <div class="mt-3">
-                    <p>¿No tenés una cuenta? <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Registrate acá</a></p>
-                    <p>¿Olvidaste tu contraseña? <a href="#" data-bs-toggle="modal" data-bs-target="#resetPasswordModal" data-bs-dismiss="modal">Recuperala acá</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal de registro -->
-<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="signupModalLabel">Registro de Usuario</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="signupName" class="form-label">Nombre:</label>
-                        <input type="text" class="form-control border-primary" id="signupName" placeholder="Ingresa tu nombre..." required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="signupEmail" class="form-label">Correo Electrónico:</label>
-                        <input type="email" class="form-control border-primary" id="signupEmail" placeholder="Ingresa tu email..." required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="signupPassword" class="form-label">Contraseña:</label>
-                        <input type="password" class="form-control border-primary" id="signupPassword" placeholder="Ingresa tu contraseña..." required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Registrarse</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal de recuperación de contraseña -->
-<div class="modal fade" id="resetPasswordModal" tabindex="-1" aria-labelledby="resetPasswordModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="resetPasswordModalLabel">Recuperar Contraseña</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <form>
-                  <div class="mb-3">
-                      <label for="resetEmail" class="form-label">Email:</label>
-                      <input type="email" class="form-control border-primary" id="resetEmail" placeholder="Ingresa tu email..." required>
-                  </div>
-                  <button type="submit" class="btn btn-warning">Enviar Enlace de Recuperación</button>
-              </form>
           </div>
       </div>
   </div>
+
+  <!-- Modal de contacto -->
+  <div class="modal fade" id="contactOwnerModal" tabindex="-1" aria-labelledby="contactOwnerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="contactOwnerModalLabel">Envianos tu consulta</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body row">
+                <div class="col-lg-6">
+                  <div>
+                    <h6 class="pt-2">Información de contacto:</h6>
+                    <p class="my-0">- Teléfono: 2494584409</p>
+                    <p class="mt-2 mb-0">- Email: rumbomanuel@hotmail.com</p>
+                  </div>
+                  <hr class="text-black">
+
+                  <form>
+                    <h6>Formulario de consulta:</h6>
+                    <div class="mb-2">
+                        <label for="senderName" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control border-primary rounded-0" id="senderName" placeholder="Ingresa tu nombre..." required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="senderEmail" class="form-label">Email:</label>
+                        <input type="email" class="form-control border-primary rounded-0" id="senderEmail" placeholder="Ingresa tu email..." required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="messageContent" class="form-label">Mensaje:</label>
+                        <textarea class="form-control border-primary rounded-0" id="messageContent" rows="3" placeholder="Escribí tu mensaje..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                  </form>
+                </div>
+
+                <div class="col-lg-6 pt-3">
+                  <h6>Dirección y horarios de atención:</h6>
+                  <p class="my-0">9 de Julio 171, Tandil, Buenos Aires</p>
+                  <p class="my-0 pb-1">9:30 AM - 1 PM // 4:30 PM - 8:30 PM</p>
+                  <iframe style="box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);" class="col-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.485578773887!2d-59.132013099999995!3d-37.3310113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911fbe1cfb88db%3A0xbca4769123679ef0!2s9%20de%20Julio%20171%2C%20B7000%20Tandil%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1728525906325!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Modal de login -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="mb-2">
+                          <label for="loginEmail" class="form-label">Email:</label>
+                          <input type="email" class="form-control border-primary rounded-0" id="loginEmail" placeholder="Ingresa tu email..." required>
+                      </div>
+                      <div class="mb-2">
+                          <label for="loginPassword" class="form-label">Contraseña:</label>
+                          <input type="password" class="form-control border-primary rounded-0" id="loginPassword" placeholder="Ingresa tu contraseña..." required>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                  </form>
+                  <div class="mt-3">
+                      <p>¿No tenés una cuenta? <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Registrate acá</a></p>
+                      <p>¿Olvidaste tu contraseña? <a href="#" data-bs-toggle="modal" data-bs-target="#resetPasswordModal" data-bs-dismiss="modal">Recuperala acá</a></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Modal de registro -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="signupModalLabel">Registro de Usuario</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="mb-3">
+                          <label for="signupName" class="form-label">Nombre:</label>
+                          <input type="text" class="form-control border-primary rounded-0" id="signupName" placeholder="Ingresa tu nombre..." required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="signupEmail" class="form-label">Correo Electrónico:</label>
+                          <input type="email" class="form-control border-primary rounded-0" id="signupEmail" placeholder="Ingresa tu email..." required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="signupPassword" class="form-label">Contraseña:</label>
+                          <input type="password" class="form-control border-primary rounded-0" id="signupPassword" placeholder="Ingresa tu contraseña..." required>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Registrarse</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Modal de recuperación de contraseña -->
+  <div class="modal fade" id="resetPasswordModal" tabindex="-1" aria-labelledby="resetPasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="resetPasswordModalLabel">Recuperar Contraseña</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="resetEmail" class="form-label">Email:</label>
+                        <input type="email" class="form-control border-primary rounded-0" id="resetEmail" placeholder="Ingresa tu email..." required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Enlace de Recuperación</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Modal de carrito -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <!-- Encabezado -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Cuerpo -->
+            <div class="modal-body">
+                <div class="d-flex flex-column">
+                    <!-- Producto 1 -->
+                    <div class="row align-items-center">
+                        <div class="col-3 col-md-2">
+                            <img src="https://via.placeholder.com/80" alt="Producto 1" class="img-fluid rounded">
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <h6 class="mb-1">Producto 1</h6>
+                            <small class="text-muted text-nowrap">Precio unitario: $50.00</small>
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <input type="number" class="form-control border-primary rounded-0" value="1" min="1">
+                        </div>
+                        <div class="col-12 col-md-4 mt-3 mt-md-0 text-md-end">
+                            <p class="mb-0">Subtotal: <strong>$50.00</strong></p>
+                            <div class="d-flex gap-2 justify-content-start justify-content-md-end mt-2">
+                                <button class="btn btn-sm btn-primary d-flex align-items-center gap-1">
+                                    <p class="my-0">Guardar</p>
+                                    <img class="m-0 p-0" src="../assets/images/icons/save.svg" alt="">
+                                </button>
+                                <button class="btn btn-sm btn-danger d-flex align-items-center gap-1">
+                                    <p class="my-0">Eliminar</p>
+                                    <img class="m-0 p-0" src="../assets/images/icons/delete.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="text-black">
+
+                    <!-- Producto 2 -->
+                    <div class="row align-items-center">
+                        <div class="col-3 col-md-2">
+                            <img src="https://via.placeholder.com/80" alt="Producto 2" class="img-fluid rounded">
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <h6 class="mb-1">Producto 2</h6>
+                            <small class="text-muted text-nowrap">Precio unitario: $30.00</small>
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <input type="number" class="form-control border-primary rounded-0" value="2" min="1">
+                        </div>
+                        <div class="col-12 col-md-4 mt-3 mt-md-0 text-md-end">
+                            <p class="mb-0">Subtotal: <strong>$60.00</strong></p>
+                            <div class="d-flex gap-2 justify-content-start justify-content-md-end mt-2">
+                                <button class="btn btn-sm btn-primary d-flex align-items-center gap-1">
+                                    <p class="my-0">Guardar</p>
+                                    <img class="m-0 p-0" src="../assets/images/icons/save.svg" alt="">
+                                </button>
+                                <button class="btn btn-sm btn-danger d-flex align-items-center gap-1">
+                                    <p class="my-0">Eliminar</p>
+                                    <img class="m-0 p-0" src="../assets/images/icons/delete.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="text-black">
+
+                    <!-- Agregar más productos según sea necesario -->
+                    <div class="row align-items-center">
+                        <div class="col-3 col-md-2">
+                            <img src="https://via.placeholder.com/80" alt="Producto x" class="img-fluid rounded">
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <h6 class="mb-1">Producto x</h6>
+                            <small class="text-muted text-nowrap">Precio unitario: $xx.xx</small>
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <input type="number" class="form-control border-primary rounded-0" value="x" min="1">
+                        </div>
+                        <div class="col-12 col-md-4 mt-3 mt-md-0 text-md-end">
+                            <p class="mb-0">Subtotal: <strong>$xx.xx</strong></p>
+                            <div class="d-flex gap-2 justify-content-start justify-content-md-end mt-2">
+                                <button class="btn btn-sm btn-primary d-flex align-items-center gap-1">
+                                    <p class="my-0">Guardar</p>
+                                    <img class="m-0 p-0" src="../assets/images/icons/save.svg" alt="">
+                                </button>
+                                <button class="btn btn-sm btn-danger d-flex align-items-center gap-1">
+                                    <p class="my-0">Eliminar</p>
+                                    <img class="m-0 p-0" src="../assets/images/icons/delete.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="text-black">
+                    
+                </div>
+
+            </div>
+
+            <!-- Pie de página -->
+            <div class="modal-footer flex-column flex-md-row justify-content-between align-items-center">
+                <p class="mb-2 mb-md-0">Total: <strong class="fs-5">$110.00</strong></p>
+                <button type="button" class="btn btn-success">Proceder al Pago</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Modal de producto -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <!-- Encabezado -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel">- Producto x -</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Cuerpo -->
+        <div class="modal-body">
+          <div class="container pb-3">
+
+            <!-- Sección principal del producto -->
+            <div class="row">
+              <!-- Columna del carrusel de imágenes del producto -->
+              <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="https://via.placeholder.com/400x400?text=Producto+1" class="d-block w-100"
+                        alt="Producto 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://via.placeholder.com/400x400?text=Producto+2" class="d-block w-100"
+                        alt="Producto 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://via.placeholder.com/400x400?text=Producto+3" class="d-block w-100"
+                        alt="Producto 3">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Columna de la información del producto -->
+              <div class="col-md-6">
+                <h1 class="pt-3 pt-md-0">- Producto x -</h1>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <h3 class="text-success">xxx$</h3>
+                <div class="d-grid gap-2 pt-3">
+                  <button class="btn btn-primary btn-lg">Añadir al carrito</button>
+                </div>
+                <ul class="list-group list-group-flush mt-3 border border-primary">
+                  <li class="list-group-item list-group-item-primary py-3">Disponibilidad: <span
+                      class="text-success">(disponibilidad)</span></li>
+                  <li class="list-group-item list-group-item-primary py-3">Costo de envío: (costo)</li>
+                </ul>
+              </div>
+            </div>
+            <hr class="text-black">
+
+            <!-- Sección de detalles adicionales -->
+            <div class="row">
+              <div class="col-md-12">
+                <h2>Detalles del Producto</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quia voluptatibus ratione ex labore
+                  rerum maiores obcaecati laudantium, at dolore laboriosam quasi officia facere esse placeat rem
+                  reprehenderit, necessitatibus accusantium?</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae libero itaque laboriosam magni,
+                  exercitationem odit quam assumenda ut ullam dolor placeat omnis voluptatibus culpa quidem! Possimus
+                  repellendus pariatur consequuntur cupiditate?</p>
+              </div>
+            </div>
+            <hr class="text-black">
+
+            <!-- Sección de reseñas y consultas -->
+            <div class="row">
+              <div class="col-12">
+                <h2>Reseñas del Producto</h2>
+              </div>
+
+              <!-- Reseña 1 -->
+              <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-3">
+                <div class="card h-100 border-black">
+                  <div class="card-body">
+                    <h5 class="card-title d-flex align-items-center gap-2">
+                      Salvador Ramírez Cruz
+                      <!-- Puntuación en estrellas -->
+                      <span class="text-warning">★★★★★</span>
+                    </h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eius commodi
+                      repellat voluptates consequuntur, repellendus, placeat quidem velit porro laboriosam quia
+                      dignissimos, labore doloremque impedit a consectetur hic suscipit inventore?</p>
+                    <p class="text-muted">Publicado el <span class="date text-primary">01/10/2024</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Reseña 2 -->
+              <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-3">
+                <div class="card h-100 border-black">
+                  <div class="card-body">
+                    <h5 class="card-title d-flex align-items-center gap-2">
+                      Gerardo Díaz
+                      <span class="text-warning">★★★★☆</span>
+                    </h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum labore expedita
+                      ullam rem! Voluptates commodi saepe temporibus. Ut cum id adipisci a eum, numquam nulla, officia
+                      architecto tenetur accusamus quidem?</p>
+                    <p class="text-muted">Publicado el <span class="date text-primary">15/09/2024</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Añadir más reseñas en columnas según sea necesario -->
+              <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-3">
+                <div class="card h-100 border-black">
+                  <div class="card-body">
+                    <h5 class="card-title d-flex align-items-center gap-2">
+                      - NPC -
+                      <span class="text-warning">★★★☆☆</span>
+                    </h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nihil eum
+                      exercitationem ratione autem, dolores placeat voluptatum at et fuga necessitatibus explicabo
+                      quisquam numquam maiores quo modi vitae! Possimus, iste!</p>
+                    <p class="text-muted">Publicado el <span class="date text-primary">xx/xx/20xx</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botón para añadir reseña -->
+              <div class="pb-3">
+                <button class="btn btn-outline-dark" data-bs-toggle="collapse" data-bs-target="#addReviewForm"
+                  aria-expanded="false" aria-controls="addReviewForm">Añadir Reseña</button>
+              </div>
+
+              <!-- Formulario para añadir reseña -->
+              <div class="collapse col-12 pb-3" id="addReviewForm">
+                <form>
+                  <div class="row">
+                    <!-- Nombre y calificación -->
+                    <div class="col-md-6 mt-3">
+                      <div class="mb-3">
+                        <input type="text" class="form-control rounded-0 border-primary py-3" id="reviewerName"
+                          placeholder="Ingresa tu nombre..." required>
+                      </div>
+                      <div class="mb-3">
+                        <select class="form-select rounded-0 border-primary py-3" id="rating" required>
+                          <option value="" selected>Selecciona una calificación</option>
+                          <option value="5">★★★★★ - Excelente</option>
+                          <option value="4">★★★★☆ - Muy bueno</option>
+                          <option value="3">★★★☆☆ - Bueno</option>
+                          <option value="2">★★☆☆☆ - Regular</option>
+                          <option value="1">★☆☆☆☆ - Malo</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- Reseña -->
+                    <div class="col-md-6 mt-3">
+                      <textarea class="form-control rounded-0 border-primary py-3" id="resenia" rows="5"
+                        placeholder="Escribe tu reseña aquí..." required></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Enviar Reseña</button>
+                </form>
+              </div>
+              <hr class="text-black">
+
+              <!-- Consultas -->
+              <div class="col-md-12">
+                <h2>Consultas sobre el Producto</h2>
+
+                <!-- Consulta 1 -->
+                <div class="card mb-3 border-black">
+                  <div class="card-body">
+                    <h5 class="card-title">Sabrina Rodríguez Casa</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi adipisci libero,
+                      est praesentium accusantium, incidunt perferendis quo, rem assumenda reiciendis aliquid atque
+                      omnis quidem repellat nostrum minus id ex pariatur.</p>
+                    <p class="text-muted mb-0">Publicado el <span class="date text-primary">02/10/2024</span></p>
+                  </div>
+                  <div class="card-footer bg-light">
+                    <h6>Respuesta del vendedor:</h6>
+                    <p class="m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et blanditiis, voluptatibus
+                      itaque officiis tempora quos minima dolores doloremque maxime consequatur praesentium perspiciatis
+                      ipsum quae corrupti eius esse a. Autem, neque!</p>
+                  </div>
+                </div>
+
+                <!-- Consulta 2 -->
+                <div class="card mb-3 border-black">
+                  <div class="card-body">
+                    <h5 class="card-title">Gabriela Durán</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
+                      necessitatibus tenetur voluptatum fugit nihil cumque doloremque optio provident ratione sunt
+                      dolores ex, consectetur similique voluptatem ad libero repudiandae inventore. Voluptatem?</p>
+                    <p class="text-muted mb-0">Publicado el <span class="date text-primary">28/09/2024</span></p>
+                  </div>
+                  <div class="card-footer bg-light">
+                    <h6>Respuesta del vendedor:</h6>
+                    <p class="m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et blanditiis, voluptatibus
+                      itaque officiis tempora quos minima dolores doloremque maxime consequatur praesentium perspiciatis
+                      ipsum quae corrupti eius esse a. Autem, neque!</p>
+                  </div>
+                </div>
+
+                <!-- Agregar más consultas según sea necesario -->
+                <div class="card mb-3 border-black">
+                  <div class="card-body">
+                    <h5 class="card-title">- NPC -</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quas laborum
+                      tempore, amet error repudiandae facilis laboriosam voluptatibus quibusdam ut reiciendis! Quis
+                      excepturi ipsa ullam quisquam nulla error molestias eaque.</p>
+                    <p class="text-muted mb-0">Publicado el <span class="date text-primary">xx/xx/20xx</span></p>
+                  </div>
+                  <div class="card-footer bg-light">
+                    <h6>Respuesta del vendedor:</h6>
+                    <p class="m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et blanditiis, voluptatibus
+                      itaque officiis tempora quos minima dolores doloremque maxime consequatur praesentium perspiciatis
+                      ipsum quae corrupti eius esse a. Autem, neque!</p>
+                  </div>
+                </div>
+
+                <!-- Formulario de consulta -->
+                <form>
+                  <div class="mb-3">
+                    <label for="consulta" class="form-label fs-5">Escribe tu consulta:</label>
+                    <textarea class="form-control rounded-0 border-primary py-3" id="consulta"
+                      placeholder="Escribe aquí tu pregunta..."></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-outline-dark">Enviar Consulta</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pie de página -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div> 
 </div>
+
 
 <script src="../js/libs/bootstrap.bundle.js"></script>
 </body>

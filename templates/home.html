@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ONE PHONE - Accesorios y Gadgets</title>
-  <link rel="stylesheet" href="../assets/css/libs/bootstrap.css">
-  <link rel="stylesheet" href="../assets/css/styles/index.css">
-  <link rel="stylesheet" href="../assets/css/gralStyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE PHONE - Accesorios y Gadgets</title>
+    <link rel="stylesheet" href="../assets/css/libs/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/styles/home.css">
+    <link rel="stylesheet" href="../assets/css/gralStyle.css">
 </head>
 
 <body>
@@ -14,33 +14,45 @@
 <!-- BARRA DE NAVEGACIÓN -->
 <nav id="barraNav" class="navbar navbar-expand-sm navbar-dark sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <a class="navbar-brand d-flex align-items-center" href="home.html">
             <img id="logo" class="img-fluid" src="../assets/images/logo.png" alt="One Phone Logo" srcset="">
         </a>
-        <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
+            aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse gap-2" id="navbarSearch">
             <form class="d-flex flex-grow-1 pt-3 pt-sm-0">
-                <input class="form-control rounded-0" type="search" placeholder="Buscar productos..." aria-label="Buscar">
+                <input class="form-control rounded-0" type="search" placeholder="Buscar productos..."
+                    aria-label="Buscar">
                 <a class="btn btn-primary rounded-0 d-flex justify-content-center align-items-center" type="submit">
                     <img class="search-icon" src="../assets/images/icons/search.svg" alt="">
                 </a>
             </form>
-            <ul class="navbar-nav ms-2 gap-2">
-                <li class="nav-item">
-                    <a class="nav-link active d-flex align-items-center" href="login.html">
-                        <img class="search-icon" src="../assets/images/icons/account.svg" alt="">
+            <div class="navbar-nav my-2 ms-sm-2 gap-2 flex-row align-items-center justify-content-center">
+                <div class="nav-item">
+                    <!-- <a class="nav-link active d-flex align-items-center" href="login.html">
+                    <img class="search-icon" src="../img/icons/account.svg" alt="">
+                    <span class="ps-2 d-sm-none">Mi cuenta</span>
+                </a> -->
+                    <button type="button" class="btn btn-outline-primary d-inline-flex align-items-center"
+                        data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <img src="../assets/images/icons/login.svg" alt="">
                         <span class="ps-2 d-sm-none">Mi cuenta</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active d-flex align-items-center" href="cart.html">
-                        <img class="search-icon" src="../assets/images/icons/cart.svg" alt="">
+                    </button>
+                </div>
+                <div class="nav-item">
+                    <!-- <a class="nav-link active d-flex align-items-center" href="cart.html">
+                    <img class="search-icon" src="../img/icons/cart.svg" alt="">
+                    <span class="ps-2 d-sm-none">Carrito</span>
+                </a> -->
+                    <button type="button" class="btn btn-outline-primary d-inline-flex align-items-center"
+                        data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <img src="../assets/images/icons/cart.svg" alt="">
                         <span class="ps-2 d-sm-none">Carrito</span>
-                    </a>
-                </li>
-            </ul>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
@@ -226,30 +238,30 @@
 <div class="container-fluid pb-3 text-light">
     <div class="row">
         <!-- Apartado de reparación -->
-        <div class="col-12 col-sm-12 col-md-6 col-lg-4 p-3 position-relative">
-            <h3>¿Necesitás reparar tu celular?</h3>
+        <div class="col-12 col-sm-6 col-lg-4 p-3 position-relative">
+            <h3>¿Reparamos tu celular?</h3>
             <hr>
-            <h2>
-                <small class="fs-5 text-nowrap btn btn-light">
-                    <a class="link-underline link-underline-opacity-0" target="_blank" href="repair.html">¡Pedí tu presupuesto!</a>
-                </small>
-            </h2>
+            <button type="button" class="btn btn-light text-primary fs-5" data-bs-toggle="modal" data-bs-target="#repairEstimateModal">
+                ¡Pedí tu presupuesto!
+            </button>
             <img class="div-icon position-absolute" src="../assets/images/icons/repair.svg" alt="">
         </div>
-        <!-- Apartado de ubicación -->
-        <div class="col-12 col-sm-6 col-md-3 col-lg-4 p-3 position-relative">
-            <h3>¡Visitá nuestro local!</h3>
+        <!-- Apartado de consulta -->
+        <div class="col-12 col-sm-6 col-lg-4 p-3 position-relative">
+            <h3 class="text-nowrap">¿Tenés dudas?</h3>
             <hr>
-            <a class="link-underline link-offset-3 text-light d-inline-flex" target="_blank" href="https://maps.app.goo.gl/WJGL3BNZpBHHSUQ68"><p class="fs-5">9 de Julio 171, Tandil <br> Buenos Aires</p></a>
+            <button type="button" class="btn btn-light text-primary fs-5" data-bs-toggle="modal" data-bs-target="#contactOwnerModal">
+                ¡Contactanos!
+            </button>
+            <img class="div-icon position-absolute" src="../assets/images/icons/contact.svg" alt="">
+        </div>
+        <!-- Apartado de ubicación -->
+        <div class="col-12 col-sm-12 col-lg-4 p-3 position-relative">
+            <h3>¡Visitanos!</h3>
+            <hr>
+            <a class="link-underline link-offset-3 text-light d-inline-flex" target="_blank" href="https://maps.app.goo.gl/WJGL3BNZpBHHSUQ68"><p class="fs-5">9 de Julio 171, Tandil</p></a>
             <img class="div-icon position-absolute" src="../assets/images/icons/location.svg" alt="">
         </div>
-        <!-- Apartado de horarios -->
-        <div class="col-12 col-sm-6 col-md-3 col-lg-4 p-3 position-relative">
-            <h3>Horarios de atención:</h3>
-            <hr>
-            <p class="fs-5">9:30 AM - 1 PM <br> 4:30 PM - 8:30 PM</p>
-            <img class="div-icon position-absolute" src="../assets/images/icons/schedule.svg" alt="">
-        </div> 
     </div>
 </div>
 
@@ -280,7 +292,9 @@
             <div class="col-md-4">
               <h5>Soporte:</h5>
               <p class="mb-2">¿Tenés una consulta?</p>
-              <a class="btn btn-light" href="contact.html">Contactanos vía mensaje directo</a>
+              <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#contactOwnerModal">
+                Contactanos vía mensaje directo
+              </button>
             </div>
   
             <!-- Sección de redes -->

@@ -49,10 +49,10 @@ hr {
 }
 */
 
-#barraNav, footer {
+.navbar, footer {
   background-color: #0d1326
 }
 
-#barraNav ul a:hover {
+.navbar ul a:hover {
   background-color: #ffffff34;
 }
