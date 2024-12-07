@@ -12,6 +12,8 @@
 
 <!-- BOTONES DE ACTIVACIÓN -->
 <div class="container my-5">
+
+  <!-- Botón del pie de página -->
   <div class="pb-3">
     <h3 class="text-light">Modal del footer:</h3>
 
@@ -20,6 +22,7 @@
     </button>
   </div>
 
+  <!-- Botones de la homepage -->
   <div class="pb-3">
     <h3 class="text-light">Modals de la homepage:</h3>
 
@@ -34,6 +37,7 @@
     </button>
   </div>
 
+  <!-- Botones del navbar -->
   <div class="pb-3">
     <h3 class="text-light">Modals del navbar:</h3>
     <div class="d-flex gap-2">
@@ -51,9 +55,13 @@
 
       <!-- Botón para abrir modal de usuario -->
       <p class="text-light">usuario:</p>
+      <button type="button" class="btn btn-outline-primary d-inline-flex align-items-center" data-bs-toggle="modal" data-bs-target="#userModal">
+        <img src="../assets/images/icons/account.svg" alt="">
+      </button>
     </div>
   </div>
 
+  <!-- Botón de selección de producto del menú -->
   <div class="pb-3">
     <h3 class="text-light">Modal de selección de producto:</h3>
 
@@ -67,6 +75,7 @@
 
 <!-- MODALS -->
 <div>
+
   <!-- Modal de reparación -->
   <div class="modal fade" id="repairEstimateModal" tabindex="-1" aria-labelledby="repairEstimateModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -257,6 +266,27 @@
                 </form>
             </div>
         </div>
+    </div>
+  </div>
+
+  <!-- Modal de opciones de usuario -->
+  <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Encabezado -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="optionsModalLabel">Opciones de Usuario</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Cuerpo -->
+        <div class="modal-body">
+          <div class="d-flex gap-2">
+            <a href="#" class="btn btn-primary">Mi perfil</a>
+            <a href="#" class="btn btn-danger">Cerrar sesión</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -618,7 +648,8 @@
         </div>
       </div>
     </div>
-  </div> 
+  </div>
+
 </div>
 
 
