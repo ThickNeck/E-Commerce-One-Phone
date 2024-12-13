@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador E-Commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/gralStyle.css">
+</head>
+
+<body>
+
+<!-- BARRA DE NAVEGACIÓN -->
+<nav id="barraNav" class="navbar navbar-expand-sm navbar-dark sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="home.html">
+            <img id="logo" class="img-fluid" src="../assets/images/logo.png" alt="Logo E-Commerce" srcset="">
+        </a>
+        <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch"
+            aria-controls="navbarSearch" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse gap-2" id="navbarSearch">
+            <form class="d-flex flex-grow-1 pt-3 pt-sm-0">
+                <input class="form-control rounded-0" type="search" placeholder="Buscar productos..."
+                    aria-label="Buscar">
+                <a class="btn btn-primary rounded-0 d-flex justify-content-center align-items-center" type="submit">
+                    <img class="search-icon" src="../assets/images/icons/search.svg" alt="">
+                </a>
+            </form>
+            <div class="navbar-nav my-2 ms-sm-2 gap-2 flex-row align-items-center justify-content-center">
+                <div class="nav-item">
+                    <button type="button" class="btn btn-outline-primary d-inline-flex align-items-center"
+                        data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <img src="../assets/images/icons/login.svg" alt="">
+                        <span class="ps-2 d-sm-none">Mi cuenta</span>
+                    </button>
+                </div>
+                <div class="nav-item">
+                    <button type="button" class="btn btn-outline-primary d-inline-flex align-items-center"
+                        data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <img src="../assets/images/icons/cart.svg" alt="">
+                        <span class="ps-2 d-sm-none">Carrito</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ADMIN -->
+<main class="container-fluid">
+    <div class="row">
+        <!-- Barra de navegación lateral -->
+        <div class="col-md-3">
+            <div class="card my-2">
+                <!-- Encabezado -->
+                <div class="card-header d-flex flex-column align-items-center">
+                    <img class="object-fit-contain my-2" src="https://via.placeholder.com/80" alt="Administrador"
+                        style="height: 10rem;">
+                    <h5>Administrador</h5>
+                </div>
+                <!-- Cuerpo -->
+                <div class="card-body">
+                    <div class="d-flex flex-column nav-pills" id="adminTabs" role="tablist">
+                        <button class="btn btn-outline-dark active mb-2 py-3" id="editar-tab" data-bs-toggle="pill"
+                            data-bs-target="#editar" type="button" role="tab">
+                            Editar Datos
+                        </button>
+                        <button class="btn btn-outline-dark mb-2 py-3" id="productos-tab" data-bs-toggle="pill"
+                            data-bs-target="#productos" type="button" role="tab">
+                            Gestión de Productos
+                        </button>
+                        <button class="btn btn-outline-dark mb-2 py-3" id="consultas-tab" data-bs-toggle="pill"
+                            data-bs-target="#consultas" type="button" role="tab">
+                            Consultas de Clientes
+                        </button>
+                        <button class="btn btn-outline-dark mb-2 py-3" id="metricas-tab" data-bs-toggle="pill"
+                            data-bs-target="#metricas" type="button" role="tab">
+                            (WIP) Métricas y Estadísticas
+                        </button>
+                    </div>
+                </div>
+                <!-- Pie de página -->
+                <div class="card-footer">
+                    <button type="button" class="btn btn-danger">Cerrar sesión</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="col-md-9">
+            <div class="tab-content my-2" id="adminContent">
+
+                <!-- Editar Datos -->
+                <div class="tab-pane  show active" id="editar" role="tabpanel">
+                    <div class="col-md-12">
+                        <h3 class="text-light">Editar Datos del Administrador</h3>
+                        <div class="d-flex flex-column mb-4 bg-light rounded">
+
+                            <!-- Nombre -->
+                            <div class="p-3 d-flex justify-content-between align-items-center">
+                                <span><strong>Nombre: </strong>Nombre Actual</span>
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editarNombreModal">Editar</button>
+                            </div>
+
+                            <!-- Nombre de Usuario -->
+                            <div class="p-3 d-flex justify-content-between align-items-center">
+                                <span><strong>Nombre de Usuario: </strong>UsuarioActual</span>
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editarUsuarioModal">Editar</button>
+                            </div>
+
+                            <!-- Correo Electrónico -->
+                            <div class="p-3 d-flex justify-content-between align-items-center">
+                                <span><strong>Correo Electrónico: </strong>usuario@correo.com</span>
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editarCorreoModal">Editar</button>
+                            </div>
+
+                            <!-- Contraseña -->
+                            <div class="p-3 d-flex justify-content-between align-items-center">
+                                <span><strong>Contraseña: </strong>********</span>
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editarPasswordModal">Editar</button>
+                            </div>
+
+                            <!-- Teléfono -->
+                            <div class="p-3 d-flex justify-content-between align-items-center">
+                                <span><strong>Teléfono: </strong>1234567890</span>
+                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editarPasswordModal">Editar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gestión de Productos -->
+                <div class="tab-pane " id="productos" role="tabpanel">
+                    <div class="mb-3 d-flex">
+                        <h3 class="text-light">Gestión de Productos</h3>
+                        <button class="btn btn-outline-primary ms-2">Agregar producto</button>
+                    </div>
+
+                    <!-- Buscador de productos -->
+                    <div class="mb-4 d-flex">
+                        <input type="text" class="form-control border-primary rounded-0" placeholder="Buscar productos por nombre o categoría...">
+                        <button class="btn btn-primary rounded-0">Buscar</button>
+                    </div>
+                    
+                    <!-- Lista de productos -->
+                    <div class="row g-3">
+                        <!-- Producto 1 -->
+                        <div class="col-12 col-sm-6">
+                            <div class="d-flex flex-column align-items-start bg-white border rounded p-3 shadow-sm gap-3">
+                                <img src="https://via.placeholder.com/80" alt="Producto 1" class="rounded object-fit-contain">
+                                <div class="flex-grow-1 text-start">
+                                    <h5 class="mb-1">Producto 1</h5>
+                                    <p class="text-muted mb-0">Categoría: Electrónica</p>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-end gap-2">
+                                    <button class="btn btn-primary btn-sm">Ver más</button>
+                                    <button class="btn btn-success btn-sm">Editar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Producto 2 -->
+                        <div class="col-12 col-sm-6">
+                            <div class="d-flex flex-column align-items-start bg-white border rounded p-3 shadow-sm gap-3">
+                                <img src="https://via.placeholder.com/80" alt="Producto 2" class="rounded object-fit-contain">
+                                <div class="flex-grow-1 text-start">
+                                    <h5 class="mb-1">Producto 2</h5>
+                                    <p class="text-muted mb-0">Categoría: Moda</p>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-end gap-2">
+                                    <button class="btn btn-primary btn-sm">Ver más</button>
+                                    <button class="btn btn-success btn-sm">Editar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Producto 3 -->
+                        <div class="col-12 col-sm-6">
+                            <div class="d-flex flex-column align-items-start bg-white border rounded p-3 shadow-sm gap-3">
+                                <img src="https://via.placeholder.com/80" alt="Producto 3" class="rounded object-fit-contain">
+                                <div class="flex-grow-1 text-start">
+                                    <h5 class="mb-1">Producto 3</h5>
+                                    <p class="text-muted mb-0">Categoría: Hogar</p>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-end gap-2">
+                                    <button class="btn btn-primary btn-sm">Ver más</button>
+                                    <button class="btn btn-success btn-sm">Editar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consultas de Clientes -->
+                <div class="tab-pane " id="consultas" role="tabpanel">
+                    <div class="mb-3 d-flex">
+                        <h3 class="text-light">Consultas de Clientes</h3>
+                    </div>
+
+                    <!-- Buscador de consultas -->
+                    <div class="mb-4 d-flex">
+                        <input type="text" class="form-control border-primary rounded-0" placeholder="Buscar productos por nombre o categoría...">
+                        <button class="btn btn-primary rounded-0">Buscar</button>
+                    </div>
+
+                    <!-- Lista de consultas -->
+                    <div class="row g-3">
+                        <!-- Consulta 1 -->
+                        <div class="col-12">
+                            <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center bg-white border rounded p-3 shadow-sm gap-3">
+                                <img src="https://via.placeholder.com/80" alt="Producto 1" class="rounded object-fit-contain">
+                                <div class="flex-grow-1 text-start">
+                                    <h5 class="mb-1">Producto 1</h5>
+                                    <p class="text-muted mb-0">Cliente: Juan Pérez</p>
+                                    <p class="mb-0">¿Este producto tiene garantía?</p>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-end gap-2">
+                                    <button class="btn btn-primary btn-sm">Ver más</button>
+                                    <button class="btn btn-success btn-sm">Responder</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Consulta 2 -->
+                        <div class="col-12">
+                            <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center bg-white border rounded p-3 shadow-sm gap-3">
+                                <img src="https://via.placeholder.com/80" alt="Producto 2" class="rounded object-fit-contain">
+                                <div class="flex-grow-1 text-start">
+                                    <h5 class="mb-1">Producto 2</h5>
+                                    <p class="text-muted mb-0">Cliente: María García</p>
+                                    <p class="mb-0">¿Cuánto tarda el envío?</p>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-end gap-2">
+                                    <button class="btn btn-primary btn-sm">Ver más</button>
+                                    <button class="btn btn-success btn-sm">Responder</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Consulta 3 -->
+                        <div class="col-12">
+                            <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center bg-white border rounded p-3 shadow-sm gap-3">
+                                <img src="https://via.placeholder.com/80" alt="Producto 3" class="rounded object-fit-contain">
+                                <div class="flex-grow-1 text-start">
+                                    <h5 class="mb-1">Producto 3</h5>
+                                    <p class="text-muted mb-0">Cliente: Ana López</p>
+                                    <p class="mb-0">¿Tienen más colores disponibles?</p>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-end gap-2">
+                                    <button class="btn btn-primary btn-sm">Ver más</button>
+                                    <button class="btn btn-success btn-sm">Responder</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Métricas y Estadísticas -->
+                <div class="tab-pane " id="metricas" role="tabpanel">
+                    <h2 class="mb-3">Métricas y Estadísticas</h2>
+                    <div class="row">
+                        <!-- Ventas totales -->
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ventas Totales</h5>
+                                    <p class="card-text">$5000.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Productos vendidos -->
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Productos Vendidos</h5>
+                                    <p class="card-text">350 unidades</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-container mt-3 bg-light">
+                        <canvas id="ventasChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="text-light py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Medios de pago:</h5>
+                <ul class="list-unstyled">
+                    <li class="pb-1 d-flex align-items-center gap-2">
+                        <img class="pay-icon" src="../assets/images/icons/mercadopago.svg" alt="">
+                        <p class="m-0">MercadoPago</p>
+                    </li>
+                    <li class="pb-1 d-flex align-items-center gap-2">
+                        <img class="pay-icon" src="../assets/images/icons/visa.svg">
+                        <p class="m-0">Visa</p>
+                    </li>
+                    <li class="pb-1 d-flex align-items-center gap-2">
+                        <img class="pay-icon" src="../assets/images/icons/americanexp.svg">
+                        <p class="m-0">American Express</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Soporte:</h5>
+                <p class="mb-2">¿Tenés una consulta?</p>
+                <button type="button" class="btn btn-light" data-bs-toggle="modal"
+                    data-bs-target="#contactOwnerModal">
+                    Contactanos vía mensaje directo
+                </button>
+            </div>
+            <div class="col-md-4">
+                <h5>Redes:</h5>
+                <ul class="list-unstyled">
+                    <li class="pb-1">
+                        <a class="text-light link-offset-2 d-inline-flex align-items-center gap-2" target="_blank"
+                            href="https://www.facebook.com/OnePhonee/">
+                            <img class="media-icon" src="../assets/images/icons/facebook.svg" alt="">
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li class="pb-1">
+                        <a class="text-light link-offset-2 d-inline-flex align-items-center gap-2" target="_blank"
+                            href="https://www.instagram.com/onephonee/">
+                            <img class="media-icon" src="../assets/images/icons/instagram.svg" alt="">
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                    <li class="pb-1">
+                        <a class="text-light link-offset-2 d-inline-flex align-items-center gap-2" target="_blank"
+                            href="https://www.tiktok.com/@elpibitoonephone">
+                            <img class="media-icon" src="../assets/images/icons/tiktok.svg" alt="">
+                            <span>Tik Tok</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bg-secondary text-center py-3">
+        <p class="my-0">© One Phone. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
